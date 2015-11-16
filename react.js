@@ -1,8 +1,8 @@
-var deepAssign = require("deep-assign");
+var merge = require("merge");
 
 var es6 = require("./es6");
 
-module.exports = deepAssign({}, es6, {
+module.exports = merge({}, es6, {
 	"ecmaFeatures": {
 		"jsx": true,
 		"experimentalObjectRestSpread": true

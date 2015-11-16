@@ -1,8 +1,8 @@
-var deepAssign = require("deep-assign");
+var merge = require("merge");
 
 var es5 = require("./es5");
 
-module.exports = deepAssign({}, es5, {
+module.exports = merge({}, es5, {
 	"ecmaFeatures": {
 		"modules": true
 	},
