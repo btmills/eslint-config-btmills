@@ -17,6 +17,7 @@ module.exports = deepAssign({}, es5, {
 		"no-dupe-class-members": 2,
 		"no-iterator": 0,
 		"no-this-before-super": 2,
+		"no-var": 2,
 
 		"arrow-parens": 0,
 		"arrow-spacing": 2,

@@ -100,7 +100,7 @@ module.exports = {
 		"no-useless-call": 2,
 		"no-useless-concat": 2,
 		"no-void": 2,
-		"no-var": 2,
+		"no-var": 0,
 		"no-warning-comments": [0, {
 			"terms": ["todo", "fixme", "xxx"],
 			"location": "start"
