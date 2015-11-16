@@ -1,0 +1,32 @@
+{
+  "name": "eslint-config-btmills",
+  "version": "0.0.0",
+  "description": "My personal ESLint shareable configurations.",
+  "main": "es5.js",
+  "license": "MIT",
+  "repository": "btmills/eslint-config-btmills",
+  "homepage": "https://github.com/btmills/eslint-config-btmills#readme",
+  "bugs": {
+    "url": "https://github.com/btmills/eslint-config-btmills/issues"
+  },
+  "author": {
+    "name": "Brandon Mills",
+    "email": "mills.brandont@gmail.com",
+    "url": "https://github.com/btmills"
+  },
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "dependencies": {
+    "eslint-plugin-react": "^3.8.0"
+  },
+  "peerDependencies": {
+    "eslint": "^1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.9.0"
+  }
+}
