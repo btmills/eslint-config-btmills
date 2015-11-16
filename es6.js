@@ -1,8 +1,8 @@
-module.exports = {
-	"root": true,
+var deepAssign = require('deep-assign');
 
-	"extends": "./es5",
+var es5 = require('./es5');
 
+module.exports = deepAssign({}, es5, {
 	"ecmaFeatures": {
 		"modules": true
 	},
@@ -30,4 +30,4 @@ module.exports = {
 		"prefer-reflect": 2,
 		"prefer-template": 2
 	}
-};
+});

@@ -1,4 +1,8 @@
-module.exports = {
+var deepAssign = require('deep-assign');
+
+var es6 = require('./es6');
+
+module.exports = deepAssign({}, es6, {
 	"ecmaFeatures": {
 		"jsx": true,
 		"experimentalObjectRestSpread": true
@@ -43,4 +47,4 @@ module.exports = {
 		"react/sort-comp": 2,
 		"react/wrap-multilines": 2
 	}
-};
+});

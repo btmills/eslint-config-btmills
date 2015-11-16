@@ -1,6 +1,4 @@
 module.exports = {
-	"root": true,
-
 	"rules": {
 		"no-alert": 2,
 		"no-array-constructor": 2,
