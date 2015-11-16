@@ -1,6 +1,6 @@
-var deepAssign = require('deep-assign');
+var deepAssign = require("deep-assign");
 
-var es5 = require('./es5');
+var es5 = require("./es5");
 
 module.exports = deepAssign({}, es5, {
 	"ecmaFeatures": {
