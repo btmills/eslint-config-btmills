@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-btmills",
+  "name": "@btmills/eslint-config-btmills",
   "version": "0.0.0",
   "description": "My personal ESLint shareable configurations.",
   "main": "es5.js",
