@@ -66,7 +66,7 @@ module.exports = {
 		"no-octal-escape": 2,
 		"no-param-reassign": 2,
 		"no-path-concat": 2,
-		"no-plusplus": 2,
+		"no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
 		"no-process-env": 0,
 		"no-process-exit": 2,
 		"no-proto": 2,
