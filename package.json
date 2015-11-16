@@ -15,7 +15,8 @@
     "url": "https://github.com/btmills"
   },
   "scripts": {
-    "test": "eslint ."
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "keywords": [
     "eslint-config"
