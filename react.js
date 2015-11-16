@@ -1,8 +1,8 @@
-var merge = require("merge");
+var deepmerge = require("deepmerge");
 
 var es6 = require("./es6");
 
-module.exports = merge({}, es6, {
+module.exports = deepmerge(es6, {
 	"ecmaFeatures": {
 		"jsx": true,
 		"experimentalObjectRestSpread": true

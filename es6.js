@@ -1,8 +1,8 @@
-var merge = require("merge");
+var deepmerge = require("deepmerge");
 
 var es5 = require("./es5");
 
-module.exports = merge({}, es5, {
+module.exports = deepmerge(es5, {
 	"ecmaFeatures": {
 		"modules": true
 	},
