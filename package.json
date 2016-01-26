@@ -4,15 +4,14 @@
   "description": "My personal ESLint shareable configurations.",
   "main": "es5.js",
   "license": "MIT",
+  "author": {
+    "name": "Brandon Mills",
+    "url": "https://github.com/btmills"
+  },
   "repository": "btmills/eslint-config-btmills",
   "homepage": "https://github.com/btmills/eslint-config-btmills#readme",
   "bugs": {
     "url": "https://github.com/btmills/eslint-config-btmills/issues"
-  },
-  "author": {
-    "name": "Brandon Mills",
-    "email": "mills.brandont@gmail.com",
-    "url": "https://github.com/btmills"
   },
   "scripts": {
     "lint": "eslint .",
