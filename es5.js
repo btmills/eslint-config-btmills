@@ -138,7 +138,7 @@ module.exports = {
 		"handle-callback-err": 2,
 		"id-length": 0,
 		"indent": 0,
-		"init-declarations": 2,
+		"init-declarations": 0,
 		"jsx-quotes": [0, "prefer-double"],
 		"key-spacing": [2, { "beforeColon": false, "afterColon": true }],
 		"lines-around-comment": 2,
