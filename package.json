@@ -21,6 +21,9 @@
   "keywords": [
     "eslint-config"
   ],
+  "files": [
+    "*.js"
+  ],
   "dependencies": {
     "deep-extend": "^0.4.1"
   },
