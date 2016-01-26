@@ -130,7 +130,7 @@ module.exports = {
 		"dot-notation": [2, { "allowKeywords": true }],
 		"eol-last": 2,
 		"eqeqeq": 2,
-		"func-names": 2,
+		"func-names": 0,
 		"func-style": [0, "declaration"],
 		"generator-star-spacing": 0,
 		"global-require": 2,
