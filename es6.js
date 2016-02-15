@@ -5,8 +5,8 @@ var extend = require("deep-extend");
 var es5 = require("./es5");
 
 module.exports = extend({}, es5, {
-	"ecmaFeatures": {
-		"modules": true
+	"parserOptions": {
+		"sourceType": "module"
 	},
 
 	"env": {

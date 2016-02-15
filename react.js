@@ -5,9 +5,11 @@ var extend = require("deep-extend");
 var es6 = require("./es6");
 
 module.exports = extend({}, es6, {
-	"ecmaFeatures": {
-		"jsx": true,
-		"experimentalObjectRestSpread": true
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
 	},
 
 	"plugins": [
