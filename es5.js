@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
 	"rules": {
 		"no-alert": 2,
@@ -22,7 +24,7 @@ module.exports = {
 		"no-else-return": 2,
 		"no-empty": 2,
 		"no-empty-character-class": 2,
-		"no-empty-label": 2,
+		"no-empty-function": 2,
 		"no-eq-null": 2,
 		"no-eval": 2,
 		"no-ex-assign": 2,
@@ -35,6 +37,7 @@ module.exports = {
 		"no-floating-decimal": 2,
 		"no-func-assign": 2,
 		"no-implicit-coercion": 0,
+		"no-implicit-globals": 2,
 		"no-implied-eval": 2,
 		"no-inline-comments": 0,
 		"no-inner-declarations": [2, "functions"],
@@ -76,6 +79,7 @@ module.exports = {
 		"no-restricted-syntax": 0,
 		"no-return-assign": 2,
 		"no-script-url": 2,
+		"no-self-assign": 2,
 		"no-self-compare": 2,
 		"no-sequences": 2,
 		"no-shadow": 2,
@@ -92,6 +96,7 @@ module.exports = {
 		"no-undefined": 2,
 		"no-unexpected-multiline": 2,
 		"no-underscore-dangle": 0,
+		"no-unmodified-loop-condition": 2,
 		"no-unneeded-ternary": 2,
 		"no-unreachable": 2,
 		"no-unused-expressions": 2,
@@ -105,9 +110,11 @@ module.exports = {
 			"terms": ["todo", "fixme", "xxx"],
 			"location": "start"
 		}],
+		"no-whitespace-before-property": 2,
 		"no-with": 2,
 
 		"array-bracket-spacing": [2, "never"],
+		"array-callback-return": 2,
 		"arrow-parens": 0,
 		"arrow-spacing": 0,
 		"accessor-pairs": 0,
@@ -141,6 +148,7 @@ module.exports = {
 		"init-declarations": 0,
 		"jsx-quotes": [0, "prefer-double"],
 		"key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+		"keyword-spacing": 2,
 		"lines-around-comment": 2,
 		"max-depth": [0, 4],
 		"max-len": [0, 80, 4],
@@ -170,8 +178,6 @@ module.exports = {
 		"semi": 2,
 		"semi-spacing": [2, { "before": false, "after": true }],
 		"sort-vars": 0,
-		"space-after-keywords": [2, "always"],
-		"space-before-keywords": [2, "always"],
 		"space-before-blocks": [2, "always"],
 		"space-before-function-paren": [2, {
 			"anonymous": "always",
@@ -179,7 +185,6 @@ module.exports = {
 		}],
 		"space-in-parens": [2, "never"],
 		"space-infix-ops": 2,
-		"space-return-throw-case": 2,
 		"space-unary-ops": [2, { "words": true, "nonwords": false }],
 		"spaced-comment": 0,
 		"strict": 2,

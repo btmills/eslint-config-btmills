@@ -1,3 +1,5 @@
+"use strict";
+
 var extend = require("deep-extend");
 
 var es5 = require("./es5");
@@ -13,10 +15,13 @@ module.exports = extend({}, es5, {
 
 	"rules": {
 		"no-class-assign": 2,
+		"no-confusing-arrow": 2,
 		"no-const-assign": 2,
 		"no-dupe-class-members": 2,
 		"no-iterator": 0,
+		"no-new-symbol": 2,
 		"no-this-before-super": 2,
+		"no-useless-constructor": 2,
 		"no-var": 2,
 
 		"arrow-parens": 0,
@@ -27,8 +32,10 @@ module.exports = extend({}, es5, {
 		"object-shorthand": 2,
 		"prefer-arrow-callback": 2,
 		"prefer-const": 2,
+		"prefer-rest-params": 2,
 		"prefer-spread": 2,
 		"prefer-reflect": 0,
-		"prefer-template": 2
+		"prefer-template": 2,
+		"template-curly-spacing": 2
 	}
 });

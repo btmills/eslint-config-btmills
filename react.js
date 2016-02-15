@@ -1,3 +1,5 @@
+"use strict";
+
 var extend = require("deep-extend");
 
 var es6 = require("./es6");
