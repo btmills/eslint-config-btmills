@@ -1,10 +1,9 @@
 "use strict";
 
-var extend = require("deep-extend");
-
+var merge = require("./merge");
 var es5 = require("./es5");
 
-module.exports = extend({}, es5, {
+module.exports = merge(es5, {
 	"parserOptions": {
 		"sourceType": "module"
 	},

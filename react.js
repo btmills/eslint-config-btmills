@@ -1,10 +1,9 @@
 "use strict";
 
-var extend = require("deep-extend");
-
+var merge = require("./merge");
 var es6 = require("./es6");
 
-module.exports = extend({}, es6, {
+module.exports = merge(es6, {
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true,

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint && mocha tests"
   },
   "keywords": [
     "eslint-config"
@@ -23,12 +23,11 @@
   "files": [
     "*.js"
   ],
-  "dependencies": {
-    "deep-extend": "^0.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^2.0.0",
-    "eslint-plugin-react": "^4.0.0"
+    "eslint-plugin-react": "^4.0.0",
+    "mocha": "^2.4.5"
   },
   "peerDependencies": {
     "eslint": "^2.0.0",
