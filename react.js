@@ -37,8 +37,7 @@ module.exports = extend({}, es6, {
 		"react/jsx-key": 2,
 		"react/jsx-max-props-per-line": 0,
 		"react/jsx-pascal-case": 2,
-		// "react/jsx-space-before-closing": 2,
-		"react/jsx-sort-prop-types": 2,
+		"react/jsx-space-before-closing": 2,
 		"react/jsx-sort-props": 0,
 		"react/jsx-uses-react": 2,
 		"react/jsx-uses-vars": 2,
@@ -62,6 +61,7 @@ module.exports = extend({}, es6, {
 		"react/require-extension": 2,
 		"react/self-closing-comp": 2,
 		"react/sort-comp": 2,
+		"react/sort-prop-types": 2,
 		"react/wrap-multilines": 2
 	}
 });
