@@ -25,8 +25,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^2.0.0",
-    "eslint-plugin-react": "^4.0.0",
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^4.1.0",
     "mocha": "^2.4.5"
   },
   "peerDependencies": {
