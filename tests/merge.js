@@ -1,303 +1,255 @@
 "use strict";
 
-var assert = require("assert");
+var test = require("ava");
 var merge = require("../merge.js");
 
-describe("merge", function () {
+test("root option should reset previous configs", function (t) {
+	var result = merge(
+		{ "env": { "browser": true } },
+		{ "root": true, "env": { "node": true } }
+	);
 
-	describe("root", function () {
+	t.same(result, { "root": true, "env": { "node": true } });
+});
 
-		it("should reset previous configs", function () {
-			var result = merge(
-				{ "env": { "browser": true } },
-				{ "root": true, "env": { "node": true } }
-			);
+test("extends should add an array to an empty config", function (t) {
+	var result = merge({}, { "extends": "foo" });
 
-			assert.deepEqual(result, { "root": true, "env": { "node": true } });
-		});
+	t.same(result, { "extends": ["foo"] });
+});
 
+test("extends, given a string, should be appended to an existing array", function (t) {
+	var result = merge(
+		{ "extends": ["foo"] },
+		{ "extends": "bar" }
+	);
+
+	t.same(result, { "extends": ["foo", "bar"] });
+});
+
+test("extends, given an array, should be concatenated with an existing array", function (t) {
+	var result = merge(
+		{ "extends": ["foo"] },
+		{ "extends": ["bar", "baz"] }
+	);
+
+	t.same(result, { "extends": ["foo", "bar", "baz"] });
+});
+
+test("parser should be added if not already present", function (t) {
+	var result = merge({}, { "parser": "foo" });
+
+	t.same(result, { "parser": "foo" });
+});
+
+test("parsershould overwrite a conflicting setting", function (t) {
+	var result = merge(
+		{ "parser": "foo" },
+		{ "parser": "bar" }
+	);
+
+	t.same(result, { "parser": "bar" });
+});
+
+test("parserOptions should be added if not already present", function (t) {
+	var result = merge({}, { "parserOptions": { "ecmaVersion": 6 } });
+
+	t.same(result, { "parserOptions": { "ecmaVersion": 6 } });
+});
+
+test("parserOptions should merge with existing settings", function (t) {
+	var result = merge(
+		{ "parserOptions": { "ecmaVersion": 6 } },
+		{ "parserOptions": { "sourceType": "module" } }
+	);
+
+	t.same(result, {
+		"parserOptions": {
+			"ecmaVersion": 6,
+			"sourceType": "module"
+		}
 	});
+});
 
-	describe("extends", function () {
+test("parserOptions should overwrite conflicting settings", function (t) {
+	var result = merge(
+		{ "parserOptions": { "sourceType": "script" } },
+		{ "parserOptions": { "sourceType": "module" } }
+	);
 
-		it("should add an array to an empty config", function () {
-			var result = merge({}, { "extends": "foo" });
-
-			assert.deepEqual(result, { "extends": ["foo"] });
-		});
-
-		describe("given a string", function () {
-
-			it("should be appended to an existing array", function () {
-				var result = merge(
-					{ "extends": ["foo"] },
-					{ "extends": "bar" }
-				);
-
-				assert.deepEqual(result, { "extends": ["foo", "bar"] });
-			});
-
-		});
-
-		describe("given an array", function () {
-
-			it("should be concatenated with an existing array", function () {
-				var result = merge(
-					{ "extends": ["foo"] },
-					{ "extends": ["bar", "baz"] }
-				);
-
-				assert.deepEqual(result, { "extends": ["foo", "bar", "baz"] });
-			});
-
-		});
-
+	t.same(result, {
+		"parserOptions": {
+			"sourceType": "module"
+		}
 	});
+});
 
-	describe("parser", function () {
+test("parserOptions.ecmaFeatures should be added if not already present", function (t) {
+	var result = merge(
+		{},
+		{ "parserOptions": { "ecmaFeatures": { "jsx": true } } }
+	);
 
-		it("should be added if not already present", function () {
-			var result = merge({}, { "parser": "foo" });
-
-			assert.deepEqual(result, { "parser": "foo" });
-		});
-
-		it("should overwrite a conflicting setting", function () {
-			var result = merge(
-				{ "parser": "foo" },
-				{ "parser": "bar" }
-			);
-
-			assert.deepEqual(result, { "parser": "bar" });
-		});
-
+	t.same(result, {
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		}
 	});
+});
 
-	describe("parserOptions", function () {
+test("parserOptions.ecmaFeatures should merge with existing settings", function (t) {
+	var result = merge(
+		{ "parserOptions": { "ecmaFeatures": { "jsx": true } } },
+		{ "parserOptions": { "ecmaFeatures": { "globalReturn": true } } }
+	);
 
-		it("should be added if not already present", function () {
-			var result = merge({}, { "parserOptions": { "ecmaVersion": 6 } });
-
-			assert.deepEqual(result, { "parserOptions": { "ecmaVersion": 6 } });
-		});
-
-		it("should merge with existing settings", function () {
-			var result = merge(
-				{ "parserOptions": { "ecmaVersion": 6 } },
-				{ "parserOptions": { "sourceType": "module" } }
-			);
-
-			assert.deepEqual(result, {
-				"parserOptions": {
-					"ecmaVersion": 6,
-					"sourceType": "module"
-				}
-			});
-		});
-
-		it("should overwrite conflicting settings", function () {
-			var result = merge(
-				{ "parserOptions": { "sourceType": "script" } },
-				{ "parserOptions": { "sourceType": "module" } }
-			);
-
-			assert.deepEqual(result, {
-				"parserOptions": {
-					"sourceType": "module"
-				}
-			});
-		});
-
-		describe("ecmaFeatures", function () {
-
-			it("should be added if not already present", function () {
-				var result = merge(
-					{},
-					{ "parserOptions": { "ecmaFeatures": { "jsx": true } } }
-				);
-
-				assert.deepEqual(result, {
-					"parserOptions": {
-						"ecmaFeatures": {
-							"jsx": true
-						}
-					}
-				});
-			});
-
-			it("should merge with existing settings", function () {
-				var result = merge(
-					{ "parserOptions": { "ecmaFeatures": { "jsx": true } } },
-					{ "parserOptions": { "ecmaFeatures": { "globalReturn": true } } }
-				);
-
-				assert.deepEqual(result, {
-					"parserOptions": {
-						"ecmaFeatures": {
-							"globalReturn": true,
-							"jsx": true
-						}
-					}
-				});
-			});
-
-			it("should overwrite conflicting settings", function () {
-				var result = merge(
-					{ "parserOptions": { "ecmaFeatures": { "jsx": true } } },
-					{ "parserOptions": { "ecmaFeatures": { "jsx": false } } }
-				);
-
-				assert.deepEqual(result, {
-					"parserOptions": {
-						"ecmaFeatures": {
-							"jsx": false
-						}
-					}
-				});
-			});
-
-		});
-
+	t.same(result, {
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true,
+				"jsx": true
+			}
+		}
 	});
+});
 
-	describe("plugins", function () {
+test("parserOptions.ecmaFeatures should overwrite conflicting settings", function (t) {
+	var result = merge(
+		{ "parserOptions": { "ecmaFeatures": { "jsx": true } } },
+		{ "parserOptions": { "ecmaFeatures": { "jsx": false } } }
+	);
 
-		it("should add an array to a config without plugins", function () {
-			var result = merge({}, { "plugins": ["foo"] });
-
-			assert.deepEqual(result, { "plugins": ["foo"] });
-		});
-
-		it("should be concatenated with existing plugins", function () {
-			var result = merge(
-				{ "plugins": ["foo"] },
-				{ "plugins": ["bar", "baz"] }
-			);
-
-			assert.deepEqual(result, { "plugins": ["foo", "bar", "baz"] });
-		});
-
+	t.same(result, {
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": false
+			}
+		}
 	});
+});
 
-	describe("env", function () {
+test("plugins should add an array to a config without plugins", function (t) {
+	var result = merge({}, { "plugins": ["foo"] });
 
-		it("should be added if not already present", function () {
-			var result = merge({}, { "env": { "browser": true } });
+	t.same(result, { "plugins": ["foo"] });
+});
 
-			assert.deepEqual(result, { "env": { "browser": true } });
-		});
+test("plugins should be concatenated with existing plugins", function (t) {
+	var result = merge(
+		{ "plugins": ["foo"] },
+		{ "plugins": ["bar", "baz"] }
+	);
 
-		it("should merge with existing environments", function () {
-			var result = merge(
-				{ "env": { "browser": true } },
-				{ "env": { "node": true } }
-			);
+	t.same(result, { "plugins": ["foo", "bar", "baz"] });
+});
 
-			assert.deepEqual(result, {
-				"env": {
-					"browser": true,
-					"node": true
-				}
-			});
-		});
+test("env should be added if not already present", function (t) {
+	var result = merge({}, { "env": { "browser": true } });
 
-		it("should overwrite conflicting environments", function () {
-			var result = merge(
-				{ "env": { "browser": true } },
-				{ "env": { "browser": false } }
-			);
+	t.same(result, { "env": { "browser": true } });
+});
 
-			assert.deepEqual(result, { "env": { "browser": false } });
-		});
+test("env should merge with existing environments", function (t) {
+	var result = merge(
+		{ "env": { "browser": true } },
+		{ "env": { "node": true } }
+	);
 
+	t.same(result, {
+		"env": {
+			"browser": true,
+			"node": true
+		}
 	});
+});
 
-	describe("globals", function () {
+test("env should overwrite conflicting environments", function (t) {
+	var result = merge(
+		{ "env": { "browser": true } },
+		{ "env": { "browser": false } }
+	);
 
-		it("should be added if not already present", function () {
-			var result = merge({}, { "globals": { "describe": true } });
+	t.same(result, { "env": { "browser": false } });
+});
 
-			assert.deepEqual(result, { "globals": { "describe": true } });
-		});
+test("globals should be added if not already present", function (t) {
+	var result = merge({}, { "globals": { "describe": true } });
 
-		it("should merge with existing globals", function () {
-			var result = merge(
-				{ "globals": { "describe": true } },
-				{ "globals": { "it": true } }
-			);
+	t.same(result, { "globals": { "describe": true } });
+});
 
-			assert.deepEqual(result, {
-				"globals": {
-					"describe": true,
-					"it": true
-				}
-			});
-		});
+test("globals should merge with existing globals", function (t) {
+	var result = merge(
+		{ "globals": { "describe": true } },
+		{ "globals": { "it": true } }
+	);
 
-		it("should overwrite conflicting globals", function () {
-			var result = merge(
-				{ "globals": { "describe": true } },
-				{ "globals": { "describe": false } }
-			);
-
-			assert.deepEqual(result, { "globals": { "describe": false } });
-		});
-
+	t.same(result, {
+		"globals": {
+			"describe": true,
+			"it": true
+		}
 	});
+});
 
-	describe("rules", function () {
+test("globals should overwrite conflicting globals", function (t) {
+	var result = merge(
+		{ "globals": { "describe": true } },
+		{ "globals": { "describe": false } }
+	);
 
-		it("should be added if not already present", function () {
-			var result = merge({}, { "rules": { "eqeqeq": 2 } });
+	t.same(result, { "globals": { "describe": false } });
+});
 
-			assert.deepEqual(result, { "rules": { "eqeqeq": 2 } });
-		});
+test("rules should be added if not already present", function (t) {
+	var result = merge({}, { "rules": { "eqeqeq": 2 } });
 
-		it("should merge with existing rules", function () {
-			var result = merge(
-				{ "rules": { "eqeqeq": 2 } },
-				{ "rules": { "quotes": [2, "single"] } }
-			);
+	t.same(result, { "rules": { "eqeqeq": 2 } });
+});
 
-			assert.deepEqual(result, {
-				"rules": {
-					"eqeqeq": 2,
-					"quotes": [2, "single"]
-				}
-			});
-		});
+test("rules should merge with existing rules", function (t) {
+	var result = merge(
+		{ "rules": { "eqeqeq": 2 } },
+		{ "rules": { "quotes": [2, "single"] } }
+	);
 
-		it("should overwrite conflicting rules", function () {
-			var result = merge(
-				{ "rules": { "eqeqeq": 2 } },
-				{ "rules": { "eqeqeq": 0 } }
-			);
-
-			assert.deepEqual(result, { "rules": { "eqeqeq": 0 } });
-		});
-
-		it("should not merge warning level and options", function () {
-			var result = merge(
-				{ "rules": { "quotes": [1, "single"] } },
-				{ "rules": { "quotes": 2 } }
-			);
-
-			assert.deepEqual(result, { "rules": { "quotes": 2 } });
-		});
-
-		it("should not merge options", function () {
-			var result = merge(
-				{ "rules": { "key-spacing": [2, { "beforeColon": true }] } },
-				{ "rules": { "key-spacing": [2, { "align": "value" }] } }
-			);
-
-			assert.deepEqual(result, {
-				"rules": {
-					"key-spacing": [2, { "align": "value" }]
-				}
-			});
-		});
-
+	t.same(result, {
+		"rules": {
+			"eqeqeq": 2,
+			"quotes": [2, "single"]
+		}
 	});
+});
 
+test("rules should overwrite conflicting rules", function (t) {
+	var result = merge(
+		{ "rules": { "eqeqeq": 2 } },
+		{ "rules": { "eqeqeq": 0 } }
+	);
+
+	t.same(result, { "rules": { "eqeqeq": 0 } });
+});
+
+test("rules should not merge warning level and options", function (t) {
+	var result = merge(
+		{ "rules": { "quotes": [1, "single"] } },
+		{ "rules": { "quotes": 2 } }
+	);
+
+	t.same(result, { "rules": { "quotes": 2 } });
+});
+
+test("rules should not merge options", function (t) {
+	var result = merge(
+		{ "rules": { "key-spacing": [2, { "beforeColon": true }] } },
+		{ "rules": { "key-spacing": [2, { "align": "value" }] } }
+	);
+
+	t.same(result, {
+		"rules": {
+			"key-spacing": [2, { "align": "value" }]
+		}
+	});
 });
