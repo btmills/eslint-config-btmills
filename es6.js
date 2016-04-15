@@ -1,9 +1,8 @@
 "use strict";
 
-var merge = require("./merge");
-var es5 = require("./es5");
+module.exports = {
+	"extends": "./es5.js",
 
-module.exports = merge(es5, {
 	"parserOptions": {
 		"sourceType": "module"
 	},
@@ -37,4 +36,4 @@ module.exports = merge(es5, {
 		"prefer-template": 2,
 		"template-curly-spacing": 2
 	}
-});
+};

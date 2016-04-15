@@ -1,9 +1,8 @@
 "use strict";
 
-var merge = require("./merge");
-var es6 = require("./es6");
+module.exports = {
+	"extends": "./es6.js",
 
-module.exports = merge(es6, {
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true,
@@ -63,4 +62,4 @@ module.exports = merge(es6, {
 		"react/sort-prop-types": 2,
 		"react/wrap-multilines": 2
 	}
-});
+};
