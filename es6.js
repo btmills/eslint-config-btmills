@@ -13,7 +13,7 @@ module.exports = {
 
 	"rules": {
 		"no-class-assign": 2,
-		"no-confusing-arrow": 2,
+		"no-confusing-arrow": 0,
 		"no-const-assign": 2,
 		"no-dupe-class-members": 2,
 		"no-iterator": 0,
