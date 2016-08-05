@@ -8,7 +8,13 @@
 $ npm install --save-dev eslint @btmills/eslint-config-btmills
 ```
 
-If using React, also install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react):
+If using ES6 modules, install [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import):
+
+```sh
+$ npm install --save-dev eslint-plugin-import
+```
+
+If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react):
 
 ```sh
 $ npm install --save-dev eslint-plugin-react
