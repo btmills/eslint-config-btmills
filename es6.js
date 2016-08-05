@@ -16,9 +16,11 @@ module.exports = {
 		"no-confusing-arrow": 0,
 		"no-const-assign": 2,
 		"no-dupe-class-members": 2,
+		"no-duplicate-imports": 2,
 		"no-iterator": 0,
 		"no-new-symbol": 2,
 		"no-this-before-super": 2,
+		"no-useless-computed-key": 2,
 		"no-useless-constructor": 2,
 		"no-var": 2,
 
@@ -34,6 +36,8 @@ module.exports = {
 		"prefer-spread": 2,
 		"prefer-reflect": 0,
 		"prefer-template": 2,
+		"rest-spread-spacing": 2,
+		"require-yield": 2,
 		"template-curly-spacing": 2
 	}
 };
