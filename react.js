@@ -25,7 +25,9 @@ module.exports = {
 		"react/jsx-no-undef": 2,
 
 		"react/jsx-boolean-value": 2,
-		"react/jsx-closing-bracket-location": 2,
+		"react/jsx-closing-bracket-location": [2, {
+			"selfClosing": false
+		}],
 		"react/jsx-curly-spacing": 2,
 		"react/jsx-equals-spacing": 2,
 		"react/jsx-filename-extension": 2,

@@ -33,6 +33,7 @@ module.exports = {
 		"computed-property-spacing": [0, "never"],
 		"constructor-super": 2,
 		"generator-star-spacing": 2,
+		"newline-after-var": 0,
 		"object-shorthand": 2,
 		"prefer-arrow-callback": 2,
 		"prefer-const": 2,
