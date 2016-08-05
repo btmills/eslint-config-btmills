@@ -23,9 +23,9 @@
   "files": [
     "*.js"
   ],
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^3.2.2",
+    "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-react": "^6.0.0"
   }
 }

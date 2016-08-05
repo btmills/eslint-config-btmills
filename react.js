@@ -14,10 +14,6 @@ module.exports = {
 		"react"
 	],
 
-	"env": {
-		"es6": true
-	},
-
 	"rules": {
 		"jsx-quotes": [2, "prefer-double"],
 
