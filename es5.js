@@ -166,7 +166,7 @@ module.exports = {
 		"new-cap": "error",
 		"new-parens": "error",
 		"newline-after-var": "error",
-		"newline-before-return": "error",
+		"newline-before-return": "off",
 		"object-curly-newline": "off",
 		"object-curly-spacing": ["error", "always"],
 		"object-property-newline": "off",
