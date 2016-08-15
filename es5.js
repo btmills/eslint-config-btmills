@@ -91,6 +91,7 @@ module.exports = {
 		"no-sparse-arrays": "error",
 		"no-sync": "error",
 		"no-tabs": "off",
+		"no-template-curly-in-string": "off",
 		"no-ternary": "off",
 		"no-trailing-spaces": "error",
 		"no-this-before-super": "off",
@@ -189,6 +190,7 @@ module.exports = {
 		"require-yield": "off",
 		"semi": "error",
 		"semi-spacing": ["error", { "before": false, "after": true }],
+		"sort-keys": "off",
 		"sort-vars": "off",
 		"space-before-blocks": ["error", "always"],
 		"space-before-function-paren": ["error", {

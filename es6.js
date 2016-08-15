@@ -23,6 +23,7 @@ module.exports = {
 		"no-duplicate-imports": "error",
 		"no-iterator": "off",
 		"no-new-symbol": "error",
+		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
 		"no-useless-computed-key": "error",
 		"no-useless-constructor": "error",
