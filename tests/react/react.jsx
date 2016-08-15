@@ -3,8 +3,10 @@ import React from 'react'; // eslint-disable-line import/no-extraneous-dependenc
 export default class Foo extends React.Component {
 
 	render() {
+		const { name, ...props } = this.props;
+
 		return (
-			<p>Hello, ${this.props.name}!</p>
+			<p {...props}>Hello, {name}!</p>
 		);
 	}
 
