@@ -45,7 +45,7 @@ module.exports = {
 		"react/jsx-wrap-multilines": "error",
 
 		"react/no-danger": "error",
-		"react/no-danger-with-children": "off", // https://github.com/yannickcr/eslint-plugin-react/issues/767
+		"react/no-danger-with-children": "error",
 		"react/no-deprecated": "error",
 		"react/no-did-mount-set-state": "error",
 		"react/no-did-update-set-state": "error",
