@@ -42,6 +42,7 @@ module.exports = {
 		"react/jsx-uses-vars": "error",
 		"react/jsx-wrap-multilines": "error",
 
+		"react/no-children-prop": "error",
 		"react/no-danger": "error",
 		"react/no-danger-with-children": "error",
 		"react/no-deprecated": "error",
@@ -54,7 +55,9 @@ module.exports = {
 		"react/no-render-return-value": "error",
 		"react/no-set-state": "off",
 		"react/no-string-refs": "off",
+		"react/no-unescaped-entities": "error",
 		"react/no-unknown-property": "error",
+		"react/no-unused-prop-types": "error",
 
 		"react/display-name": "error",
 		"react/forbid-component-props": "off",
@@ -67,6 +70,7 @@ module.exports = {
 		"react/require-render-return": "error",
 		"react/self-closing-comp": "error",
 		"react/sort-comp": "error",
-		"react/sort-prop-types": "error"
+		"react/sort-prop-types": "error",
+		"react/style-prop-object": "error"
 	}
 };
