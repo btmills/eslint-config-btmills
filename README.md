@@ -29,6 +29,7 @@ module.exports = {
 	"extends": "@btmills/eslint-config-btmills", // Same as es5
 	"extends": "@btmills/eslint-config-btmills/es5",
 	"extends": "@btmills/eslint-config-btmills/es6",
+	"extends": "@btmills/eslint-config-btmills/es7",
 
 	// Use React with a language config by extending both
 	"extends": [
