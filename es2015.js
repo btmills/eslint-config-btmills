@@ -31,7 +31,7 @@ module.exports = {
 
 		"arrow-parens": "off",
 		"arrow-spacing": "error",
-		"class-methods-use-this": "off",
+		"class-methods-use-this": "error",
 		"computed-property-spacing": ["off", "never"],
 		"constructor-super": "error",
 		"generator-star-spacing": "error",
