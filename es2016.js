@@ -1,9 +1,9 @@
 "use strict";
 
 module.exports = {
-	"extends": "./es6.js",
+	"extends": "./es2015.js",
 
 	"parserOptions": {
-		"ecmaVersion": 7
+		"ecmaVersion": 2016
 	}
 };

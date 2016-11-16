@@ -26,15 +26,15 @@ Add one of the following lines to your project's `.eslintrc.js`:
 
 ```js
 module.exports = {
-	"extends": "@btmills/eslint-config-btmills", // Same as es5
+	"extends": "@btmills/eslint-config-btmills", // Defaults to es5
 	"extends": "@btmills/eslint-config-btmills/es5",
-	"extends": "@btmills/eslint-config-btmills/es6",
-	"extends": "@btmills/eslint-config-btmills/es7",
-	"extends": "@btmills/eslint-config-btmills/es8",
+	"extends": "@btmills/eslint-config-btmills/es2015",
+	"extends": "@btmills/eslint-config-btmills/es2016",
+	"extends": "@btmills/eslint-config-btmills/es2017",
 
 	// Use React with a language config by extending both
 	"extends": [
-		"extends": "@btmills/eslint-config-btmills/es6",
+		"extends": "@btmills/eslint-config-btmills/es2015",
 		"@btmills/eslint-config-btmills/react"
 	]
 };

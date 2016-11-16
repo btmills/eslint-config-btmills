@@ -1,0 +1,5 @@
+{
+	"root": true,
+
+	"extends": "../../es2016.js"
+}
