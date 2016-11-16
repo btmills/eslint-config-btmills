@@ -22,15 +22,20 @@ $ npm install --save-dev eslint-plugin-react
 
 ## Usage
 
-Add one of the following lines to your project's `.eslintrc`:
+Add one of the following lines to your project's `.eslintrc.js`:
 
 ```js
-{
-	"extends": "@btmills/eslint-config-btmills",
+module.exports = {
+	"extends": "@btmills/eslint-config-btmills", // Same as es5
 	"extends": "@btmills/eslint-config-btmills/es5",
 	"extends": "@btmills/eslint-config-btmills/es6",
-	"extends": "@btmills/eslint-config-btmills/react"
-}
+
+	// Use React with a language config by extending both
+	"extends": [
+		"extends": "@btmills/eslint-config-btmills/es6",
+		"@btmills/eslint-config-btmills/react"
+	]
+};
 ```
 
 ## License

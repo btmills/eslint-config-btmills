@@ -1,8 +1,6 @@
 "use strict";
 
 module.exports = {
-	"extends": "./es6.js",
-
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true,
