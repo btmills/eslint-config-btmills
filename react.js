@@ -55,7 +55,7 @@ module.exports = {
 		"react/no-render-return-value": "error",
 		"react/no-set-state": "off",
 		"react/no-string-refs": "off",
-		"react/no-unescaped-entities": "error",
+		"react/no-unescaped-entities": "off",
 		"react/no-unknown-property": "error",
 		"react/no-unused-prop-types": "error",
 
