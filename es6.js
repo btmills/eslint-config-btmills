@@ -31,9 +31,11 @@ module.exports = {
 
 		"arrow-parens": "off",
 		"arrow-spacing": "error",
+		"class-methods-use-this": "off",
 		"computed-property-spacing": ["off", "never"],
 		"constructor-super": "error",
 		"generator-star-spacing": "error",
+		"lines-around-directive": "off",
 		"newline-after-var": "off",
 		"object-shorthand": "error",
 		"prefer-arrow-callback": "error",
@@ -44,6 +46,7 @@ module.exports = {
 		"prefer-template": "error",
 		"rest-spread-spacing": "error",
 		"require-yield": "error",
+		"symbol-description": "error",
 		"template-curly-spacing": "error",
 
 		"import/no-amd": "error",
