@@ -20,7 +20,7 @@ module.exports = {
 		"no-confusing-arrow": "off",
 		"no-const-assign": "error",
 		"no-dupe-class-members": "error",
-		"no-duplicate-imports": "error",
+		"no-duplicate-imports": "off", // Covered by "import/no-duplicates"
 		"no-iterator": "off",
 		"no-new-symbol": "error",
 		"no-template-curly-in-string": "error",
