@@ -162,7 +162,7 @@ module.exports = {
 		"line-comment-position": "off",
 		"linebreak-style": ["error", "unix"],
 		"lines-around-comment": "error",
-		"lines-around-directive": ["error", { "before": "never", "after": "always" }],
+		"lines-around-directive": ["error", "always"],
 		"max-depth": "off",
 		"max-len": "off",
 		"max-lines": "off",
