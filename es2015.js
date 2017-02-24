@@ -39,7 +39,7 @@ module.exports = {
 		"newline-after-var": "off",
 		"object-shorthand": "error",
 		"prefer-arrow-callback": "error",
-		"prefer-const": "error",
+		"prefer-const": ["error", { "destructuring": "all" }],
 		"prefer-rest-params": "error",
 		"prefer-spread": "error",
 		"prefer-reflect": "off",
