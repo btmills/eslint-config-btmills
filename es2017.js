@@ -8,6 +8,9 @@ module.exports = {
 	},
 
 	"rules": {
-		"no-return-await": "error"
+		"no-await-in-loop": "error",
+		"no-return-await": "error",
+
+		"require-await": "error"
 	}
 };
