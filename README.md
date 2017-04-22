@@ -34,7 +34,7 @@ module.exports = {
 
 	// Use React with a language config by extending both
 	"extends": [
-		"extends": "@btmills/eslint-config-btmills/es2015",
+		"@btmills/eslint-config-btmills/es2015",
 		"@btmills/eslint-config-btmills/react"
 	]
 };
