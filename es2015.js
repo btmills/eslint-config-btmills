@@ -78,7 +78,7 @@ module.exports = {
 		"import/namespace": "error",
 		"import/newline-after-import": "error",
 		"import/order": "off",
-		"import/prefer-default-export": "warn",
+		"import/prefer-default-export": "off",
 		"import/unambiguous": "off"
 	}
 };
