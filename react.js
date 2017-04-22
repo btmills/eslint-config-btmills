@@ -75,7 +75,7 @@ module.exports = {
 		"react/require-optimization": "off",
 		"react/require-render-return": "error",
 		"react/self-closing-comp": "error",
-		"react/sort-comp": "error",
+		"react/sort-comp": "off",
 		"react/sort-prop-types": "error",
 		"react/style-prop-object": "error",
 		"react/void-dom-elements-no-children": "error"
