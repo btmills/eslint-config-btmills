@@ -1,5 +1,5 @@
 async function foo(a, b) {
-	return a + b;
+	return a + await b;
 }
 
 async function bar() {

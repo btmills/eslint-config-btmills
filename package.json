@@ -24,7 +24,7 @@
     "*.js"
   ],
   "peerDependencies": {
-    "eslint": "^3.10.2"
+    "eslint": "^3.19.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
