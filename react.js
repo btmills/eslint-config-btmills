@@ -42,6 +42,7 @@ module.exports = {
 		"react/jsx-uses-vars": "error",
 		"react/jsx-wrap-multilines": "error",
 
+		"react/no-array-index-key": "error",
 		"react/no-children-prop": "error",
 		"react/no-danger": "error",
 		"react/no-danger-with-children": "error",
@@ -61,16 +62,20 @@ module.exports = {
 
 		"react/display-name": "error",
 		"react/forbid-component-props": "off",
+		"react/forbid-elements": "off",
+		"react/forbid-foreign-prop-types": "off",
 		"react/forbid-prop-types": "off",
 		"react/prefer-es6-class": "error",
 		"react/prefer-stateless-functions": "off",
-		"react/prop-types": "warn",
+		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
+		"react/require-default-props": "error",
 		"react/require-optimization": "off",
 		"react/require-render-return": "error",
 		"react/self-closing-comp": "error",
 		"react/sort-comp": "error",
 		"react/sort-prop-types": "error",
-		"react/style-prop-object": "error"
+		"react/style-prop-object": "error",
+		"react/void-dom-elements-no-children": "error"
 	}
 };
