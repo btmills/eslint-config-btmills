@@ -15,7 +15,7 @@ module.exports = {
 	"rules": {
 		"jsx-quotes": ["error", "prefer-double"],
 
-		"react/jsx-no-bind": ["error", { "ignoreRefs": true }],
+		"react/jsx-no-bind": "off",
 		"react/jsx-no-comment-textnodes": "warn",
 		"react/jsx-no-duplicate-props": "error",
 		"react/jsx-no-literals": "off",
