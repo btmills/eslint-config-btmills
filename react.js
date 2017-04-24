@@ -60,7 +60,7 @@ module.exports = {
 		"react/no-string-refs": "off",
 		"react/no-unescaped-entities": "off",
 		"react/no-unknown-property": "error",
-		"react/no-unused-prop-types": "error",
+		"react/no-unused-prop-types": "off",
 
 		"react/display-name": "error",
 		"react/forbid-component-props": "off",
