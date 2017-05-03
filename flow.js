@@ -8,6 +8,11 @@ module.exports = {
 	],
 
 	"rules": {
+		// Flow doesn't allow literal numbers as keys
+		"quote-props": ["error", "as-needed", {
+			"numbers": true
+		}],
+
 		"flowtype/no-dupe-keys": "error",
 		"flowtype/no-primitive-constructor-types": "error",
 		"flowtype/no-types-missing-file-annotation": "error",
