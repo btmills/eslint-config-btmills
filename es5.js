@@ -199,7 +199,9 @@ module.exports = {
 		"prefer-rest-params": "off",
 		"prefer-spread": "off",
 		"prefer-template": "off",
-		"quote-props": ["error", "consistent-as-needed"],
+		"quote-props": ["error", "as-needed", {
+			"numbers": true
+		}],
 		"quotes": ["error", "single"],
 		"radix": "error",
 		"require-await": "off",
