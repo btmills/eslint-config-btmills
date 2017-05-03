@@ -20,6 +20,12 @@ If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslin
 $ npm install --save-dev eslint-plugin-react
 ```
 
+If using [Flow](https://flow.org), install [babel-eslint](https://github.com/babel/babel-eslint) and [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype):
+
+```sh
+$ npm install --save-dev babel-eslint eslint-plugin-flowtype
+```
+
 ## Usage
 
 Add one of the following lines to your project's `.eslintrc.js`:
@@ -32,10 +38,11 @@ module.exports = {
 	"extends": "@btmills/eslint-config-btmills/es2016",
 	"extends": "@btmills/eslint-config-btmills/es2017",
 
-	// Use React with a language config by extending both
+	// Use React and Flow with a language config by extending multiple configs
 	"extends": [
 		"@btmills/eslint-config-btmills/es2015",
-		"@btmills/eslint-config-btmills/react"
+		"@btmills/eslint-config-btmills/react",
+		"@btmills/eslint-config-btmills/flow"
 	]
 };
 ```
