@@ -60,6 +60,7 @@ module.exports = {
 
 		"import/no-absolute-path": "error",
 		"import/no-amd": "error",
+		"import/no-anonymous-default-export": "off",
 		"import/no-commonjs": "error",
 		"import/no-deprecated": "warn",
 		"import/no-duplicates": "error",
@@ -79,6 +80,7 @@ module.exports = {
 
 		"import/default": "error",
 		"import/export": "error",
+		"import/exports-last": "off",
 		"import/extensions": "off",
 		"import/first": "error",
 		"import/named": "error",
