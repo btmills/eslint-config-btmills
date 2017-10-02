@@ -35,9 +35,16 @@ module.exports = {
 		"computed-property-spacing": ["off", "never"],
 		"constructor-super": "error",
 		"generator-star-spacing": "error",
-		"lines-around-directive": "off",
-		"newline-after-var": "off",
 		"object-shorthand": "error",
+		"padding-line-between-statements": ["error", {
+			"blankLine": "always",
+			"prev": "import",
+			"next": "*"
+		}, {
+			"blankLine": "any",
+			"prev": "import",
+			"next": "import"
+		}],
 		"prefer-arrow-callback": "error",
 		"prefer-const": ["error", { "destructuring": "all" }],
 		"prefer-promise-reject-errors": "off",
