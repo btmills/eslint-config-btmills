@@ -26,6 +26,11 @@ module.exports = {
 		"react/jsx-closing-bracket-location": ["error", {
 			"selfClosing": false
 		}],
+		"react/jsx-closing-tag-location": "error",
+		"react/jsx-curly-brace-presence": ["error", {
+			"props": "never",
+			"children": "ignore"
+		}],
 		"react/jsx-curly-spacing": "error",
 		"react/jsx-equals-spacing": "error",
 		"react/jsx-filename-extension": ["error", {
@@ -39,7 +44,9 @@ module.exports = {
 		"react/jsx-max-props-per-line": "off",
 		"react/jsx-pascal-case": "error",
 		"react/jsx-sort-props": "off",
-		"react/jsx-space-before-closing": "error",
+		// This rule has been deprecated.
+		// "react/jsx-space-before-closing": "error",
+		"react/jsx-tag-spacing": "error",
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": "error",
 		"react/jsx-wrap-multilines": "error",
@@ -55,13 +62,20 @@ module.exports = {
 		"react/no-find-dom-node": "error",
 		"react/no-is-mounted": "error",
 		"react/no-multi-comp": "off",
+		"react/no-redundant-should-component-update": "error",
 		"react/no-render-return-value": "error",
 		"react/no-set-state": "off",
 		"react/no-string-refs": "off",
+		"react/no-typos": "error",
 		"react/no-unescaped-entities": "off",
 		"react/no-unknown-property": "error",
 		"react/no-unused-prop-types": "off",
+		"react/no-unused-state": "error",
+		"react/no-will-update-set-state": "error",
 
+		"react/boolean-prop-naming": "off",
+		// I don't like how it expects the corresponding prop to be optional.
+		"react/default-props-match-prop-types": "off",
 		"react/display-name": "error",
 		"react/forbid-component-props": "off",
 		"react/forbid-elements": "off",

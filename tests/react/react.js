@@ -1,4 +1,7 @@
-import React from 'react'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
+import PropTypes from 'prop-types';
+import React from 'react';
+/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved */
 
 export default class Foo extends React.Component {
 
@@ -15,5 +18,5 @@ export default class Foo extends React.Component {
 Foo.displayName = 'Foo';
 
 Foo.propTypes = {
-	name: React.PropTypes.string.isRequired
+	name: PropTypes.string.isRequired
 };
