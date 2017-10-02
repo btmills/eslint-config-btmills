@@ -11,6 +11,7 @@ module.exports = {
 		"flowtype/no-dupe-keys": "error",
 		"flowtype/no-primitive-constructor-types": "error",
 		"flowtype/no-types-missing-file-annotation": "error",
+		"flowtype/no-unused-expressions": "error",
 		"flowtype/no-weak-types": "warn",
 
 		"flowtype/boolean-style": "error",
