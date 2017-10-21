@@ -9,6 +9,7 @@ module.exports = {
 
 	"rules": {
 		"flowtype/no-dupe-keys": "error",
+		"flowtype/no-mutable-array": "off",
 		"flowtype/no-primitive-constructor-types": "error",
 		"flowtype/no-types-missing-file-annotation": "error",
 		"flowtype/no-unused-expressions": "error",
