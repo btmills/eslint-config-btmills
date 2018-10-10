@@ -1,6 +1,6 @@
 {
   "name": "@btmills/eslint-config-btmills",
-  "version": "4.0.0-alpha.2",
+  "version": "5.0.0-alpha.1",
   "description": "My personal ESLint shareable configurations.",
   "main": "es5.js",
   "license": "MIT",
