@@ -23,6 +23,7 @@ module.exports = {
 		"react/jsx-no-undef": "error",
 
 		"react/jsx-boolean-value": "error",
+		"react/jsx-child-element-spacing": "warn",
 		"react/jsx-closing-bracket-location": ["error", {
 			"selfClosing": false
 		}],
@@ -42,7 +43,10 @@ module.exports = {
 		"react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-key": "error",
 		"react/jsx-max-props-per-line": "off",
+		"react/jsx-one-expression-per-line": "off",
 		"react/jsx-pascal-case": "error",
+		"react/jsx-props-no-multi-spaces": "off",
+		"react/jsx-sort-default-props": "off",
 		"react/jsx-sort-props": "off",
 		// This rule has been deprecated.
 		// "react/jsx-space-before-closing": "error",
@@ -51,6 +55,7 @@ module.exports = {
 		"react/jsx-uses-vars": "error",
 		"react/jsx-wrap-multilines": "error",
 
+		"react/no-access-state-in-setstate": "error",
 		"react/no-array-index-key": "error",
 		"react/no-children-prop": "error",
 		"react/no-danger": "error",
@@ -66,18 +71,23 @@ module.exports = {
 		"react/no-render-return-value": "error",
 		"react/no-set-state": "off",
 		"react/no-string-refs": "off",
+		"react/no-this-in-sfc": "off",
 		"react/no-typos": "error",
 		"react/no-unescaped-entities": "off",
 		"react/no-unknown-property": "error",
+		"react/no-unsafe": "warn",
 		"react/no-unused-prop-types": "off",
 		"react/no-unused-state": "error",
 		"react/no-will-update-set-state": "error",
 
 		"react/boolean-prop-naming": "off",
+		"react/button-has-type": "warn",
 		// I don't like how it expects the corresponding prop to be optional.
 		"react/default-props-match-prop-types": "off",
+		"react/destructuring-assignment": "off",
 		"react/display-name": "error",
 		"react/forbid-component-props": "off",
+		"react/forbid-dom-props": "off",
 		"react/forbid-elements": "off",
 		"react/forbid-foreign-prop-types": "off",
 		"react/forbid-prop-types": "off",
