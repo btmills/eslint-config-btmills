@@ -3,9 +3,9 @@
 module.exports = {
 	"parserOptions": {
 		"ecmaFeatures": {
-			"jsx": true,
-			"experimentalObjectRestSpread": true
-		}
+			"jsx": true
+		},
+		"ecmaVersion": 2018
 	},
 
 	"plugins": [
