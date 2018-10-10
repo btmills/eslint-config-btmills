@@ -6,6 +6,7 @@ function count(value: Thing): string {
 	return `${value} ${value === 1 ? 'item' : 'items'}`;
 }
 
-const message: string = count(42);
+// $FlowFixMe: https://github.com/example/issues/1234
+const message: boolean = count(42);
 
 message.toUpperCase();
