@@ -35,6 +35,7 @@ module.exports = {
 		"computed-property-spacing": ["off", "never"],
 		"constructor-super": "error",
 		"generator-star-spacing": "error",
+		"implicit-arrow-linebreak": "off",
 		"object-shorthand": "error",
 		"padding-line-between-statements": ["error", {
 			"blankLine": "always",
