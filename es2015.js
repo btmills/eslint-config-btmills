@@ -22,6 +22,7 @@ module.exports = {
 		"no-dupe-class-members": "error",
 		"no-duplicate-imports": "off", // Covered by "import/no-duplicates"
 		"no-iterator": "off",
+		"no-misleading-character-class": "error",
 		"no-new-symbol": "error",
 		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
@@ -36,6 +37,7 @@ module.exports = {
 		"constructor-super": "error",
 		"generator-star-spacing": "error",
 		"implicit-arrow-linebreak": "off",
+		"max-classes-per-file": "off",
 		"object-shorthand": "error",
 		"padding-line-between-statements": ["error", {
 			"blankLine": "always",
@@ -53,6 +55,8 @@ module.exports = {
 		"prefer-rest-params": "error",
 		"prefer-spread": "error",
 		"prefer-template": "error",
+		"require-atomic-updates": "error",
+		"require-unicode-regexp": "warn",
 		"rest-spread-spacing": "error",
 		"require-yield": "error",
 		"symbol-description": "error",

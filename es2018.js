@@ -5,5 +5,9 @@ module.exports = {
 
 	"parserOptions": {
 		"ecmaVersion": 2018
+	},
+
+	"rules": {
+		"prefer-object-spread": "warn"
 	}
 };
