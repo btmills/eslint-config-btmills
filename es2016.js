@@ -5,5 +5,9 @@ module.exports = {
 
 	"parserOptions": {
 		"ecmaVersion": 2016
+	},
+
+	"rules": {
+		"prefer-exponentiation-operator": "error"
 	}
 };
