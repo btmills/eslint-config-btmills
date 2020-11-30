@@ -1,0 +1,5 @@
+{
+	"root": true,
+
+	"extends": "../../es2020.js"
+}

@@ -8,7 +8,7 @@ module.exports = {
 		"no-async-promise-executor": "off", // ES2017
 		"no-await-in-loop": "off", // ES2017
 		"no-bitwise": "error",
-		"no-buffer-constructor": "error",
+		"no-buffer-constructor": "error", // TODO: Deprecated. Use eslint-plugin-node.
 		"no-caller": "error",
 		"no-catch-shadow": "error",
 		"no-class-assign": "off", // ES2015
@@ -60,9 +60,11 @@ module.exports = {
 		"no-lone-blocks": "error",
 		"no-lonely-if": "off",
 		"no-loop-func": "error",
+		"no-loss-of-precision": "error",
+		"no-magic-numbers": "off",
 		"no-misleading-character-class": "error",
 		"no-mixed-operators": "off",
-		"no-mixed-requires": "off",
+		"no-mixed-requires": "off", // TODO: Deprecated. Use eslint-plugin-node.
 		"no-mixed-spaces-and-tabs": ["error", false],
 		"no-multi-assign": "error",
 		"no-multi-spaces": "error",
@@ -74,23 +76,26 @@ module.exports = {
 		"no-new": "off",
 		"no-new-func": "error",
 		"no-new-object": "error",
-		"no-new-require": "error",
+		"no-new-require": "error", // TODO: Deprecated. Use eslint-plugin-node.
 		"no-new-symbol": "off", // ES2015
 		"no-new-wrappers": "error",
+		"no-nonoctal-decimal-escape": "error",
 		"no-obj-calls": "error",
 		"no-octal": "error",
 		"no-octal-escape": "error",
 		"no-param-reassign": "error",
-		"no-path-concat": "error",
+		"no-path-concat": "error", // TODO: Deprecated. Use eslint-plugin-node.
 		"no-plusplus": "off",
-		"no-process-env": "off",
-		"no-process-exit": "error",
+		"no-process-env": "off", // TODO: Deprecated. Use eslint-plugin-node.
+		"no-process-exit": "error", // TODO: Deprecated. Use eslint-plugin-node.
+		"no-promise-executor-return": "off", // ES2015
 		"no-proto": "error",
 		"no-prototype-builtins": "off",
 		"no-redeclare": "error",
 		"no-regex-spaces": "error",
+		"no-restricted-exports": "off", // ES2015
 		"no-restricted-globals": "off",
-		"no-restricted-modules": "off",
+		"no-restricted-modules": "off", // TODO: Deprecated. Use eslint-plugin-node.
 		"no-restricted-properties": "off",
 		"no-restricted-syntax": "off",
 		"no-return-assign": "error",
@@ -119,11 +124,13 @@ module.exports = {
 		"no-unmodified-loop-condition": "error",
 		"no-unneeded-ternary": "error",
 		"no-unreachable": "error",
+		"no-unreachable-loop": "error",
 		"no-unsafe-finally": "error",
 		"no-unsafe-negation": "error",
 		"no-unused-expressions": "error",
 		"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
 		"no-use-before-define": "off",
+		"no-useless-backreference": "error",
 		"no-useless-call": "error",
 		"no-useless-catch": "error",
 		"no-useless-computed-key": "off", // ES2015
@@ -147,7 +154,7 @@ module.exports = {
 		"block-scoped-var": "off",
 		"block-spacing": "error",
 		"brace-style": ["error", "1tbs"],
-		"callback-return": "error",
+		"callback-return": "error", // TODO: Deprecated. Use eslint-plugin-node.
 		"camelcase": "off",
 		"capitalized-comments": "off",
 		"class-methods-use-this": "off", // ES2015
@@ -175,10 +182,12 @@ module.exports = {
 		"function-paren-newline": "off",
 		"generator-star-spacing": "off", // ES2015
 		"getter-return": "error",
-		"global-require": "error",
+		"global-require": "error", // TODO: Deprecated. Use eslint-plugin-node.
 		"grouped-accessor-pairs": ["error", "getBeforeSet"],
 		"guard-for-in": "error",
-		"handle-callback-err": "error",
+		"handle-callback-err": "error", // TODO: Deprecated. Use eslint-plugin-node.
+		"id-blacklist": "off", // Deprecated. Use id-denylist.
+		"id-denylist": "off",
 		"id-length": "off",
 		"id-match": "off",
 		"indent": "off",

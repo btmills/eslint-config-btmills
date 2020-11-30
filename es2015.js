@@ -24,6 +24,8 @@ module.exports = {
 		"no-duplicate-imports": "off", // Covered by "import/no-duplicates"
 		"no-import-assign": "error",
 		"no-new-symbol": "error",
+		"no-promise-executor-return": "error",
+		"no-restricted-exports": "off",
 		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
 		"no-useless-computed-key": "error",

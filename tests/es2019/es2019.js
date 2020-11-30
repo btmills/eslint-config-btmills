@@ -1,0 +1,5 @@
+try {
+	// noop
+} catch {
+	// noop
+}
