@@ -86,6 +86,7 @@ module.exports = {
 		"import/no-named-as-default": "error",
 		"import/no-named-as-default-member": "error",
 		"import/no-named-default": "error",
+		"import/no-named-export": "off",
 		"import/no-namespace": "off",
 		"import/no-nodejs-modules": "off",
 		"import/no-relative-parent-imports": "off",
@@ -93,6 +94,7 @@ module.exports = {
 		"import/no-self-import": "error",
 		"import/no-unassigned-imports": "off",
 		"import/no-unresolved": "error",
+		"import/no-unused-modules": "off",
 		"import/no-useless-path-segments": "off",
 		"import/no-webpack-loader-syntax": "error",
 
