@@ -8,6 +8,7 @@ module.exports = {
 	},
 
 	"rules": {
+		"prefer-named-capture-group": "off",
 		"prefer-object-spread": "warn"
 	}
 };

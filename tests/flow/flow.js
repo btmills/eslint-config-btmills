@@ -2,7 +2,7 @@
 
 type Thing = number;
 
-function count(value: Thing): string {
+function count(value: Thing): mixed {
 	return `${value} ${value === 1 ? 'item' : 'items'}`;
 }
 
