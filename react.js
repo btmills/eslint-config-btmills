@@ -12,6 +12,14 @@ module.exports = {
 		"react"
 	],
 
+	"settings": {
+		"react": {
+			// `detect` will be the default in the future, but as of writing,
+			// the default is still `latest`, which warns.
+			"version": "detect"
+		}
+	},
+
 	"rules": {
 		"jsx-quotes": ["error", "prefer-double"],
 
@@ -21,6 +29,7 @@ module.exports = {
 		"react/jsx-no-literals": "off",
 		"react/jsx-no-target-blank": "error",
 		"react/jsx-no-undef": "error",
+		"react/jsx-no-useless-fragment": "error",
 
 		"react/jsx-boolean-value": "error",
 		"react/jsx-child-element-spacing": "warn",
@@ -32,12 +41,14 @@ module.exports = {
 			"props": "never",
 			"children": "ignore"
 		}],
+		"react/jsx-curly-newline": "off",
 		"react/jsx-curly-spacing": "error",
 		"react/jsx-equals-spacing": "error",
 		"react/jsx-filename-extension": ["error", {
 			"extensions": [".js"]
 		}],
 		"react/jsx-first-prop-new-line": "off",
+		"react/jsx-fragments": "off",
 		"react/jsx-handler-names": "error",
 		"react/jsx-indent": ["error", "tab"],
 		"react/jsx-indent-props": ["error", "tab"],
@@ -46,6 +57,7 @@ module.exports = {
 		"react/jsx-one-expression-per-line": "off",
 		"react/jsx-pascal-case": "error",
 		"react/jsx-props-no-multi-spaces": "off",
+		"react/jsx-props-no-spreading": "off",
 		"react/jsx-sort-default-props": "off",
 		"react/jsx-sort-props": "off",
 		// This rule has been deprecated.
@@ -92,6 +104,7 @@ module.exports = {
 		"react/forbid-foreign-prop-types": "off",
 		"react/forbid-prop-types": "off",
 		"react/prefer-es6-class": "error",
+		"react/prefer-read-only-props": "off", // Use flowtype/require-readonly-react-props
 		"react/prefer-stateless-functions": "off",
 		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
@@ -101,6 +114,8 @@ module.exports = {
 		"react/self-closing-comp": "error",
 		"react/sort-comp": "off",
 		"react/sort-prop-types": "error",
+		"react/state-in-constructor": "off",
+		"react/static-property-placement": "off",
 		"react/style-prop-object": "error",
 		"react/void-dom-elements-no-children": "error"
 	}
