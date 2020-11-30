@@ -21,8 +21,6 @@ module.exports = {
 		"no-const-assign": "error",
 		"no-dupe-class-members": "error",
 		"no-duplicate-imports": "off", // Covered by "import/no-duplicates"
-		"no-iterator": "off",
-		"no-misleading-character-class": "error",
 		"no-new-symbol": "error",
 		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
@@ -50,6 +48,7 @@ module.exports = {
 		}],
 		"prefer-arrow-callback": "error",
 		"prefer-const": ["error", { "destructuring": "all" }],
+		"prefer-destructuring": "off",
 		"prefer-promise-reject-errors": "off",
 		"prefer-reflect": "off",
 		"prefer-rest-params": "error",
@@ -57,8 +56,8 @@ module.exports = {
 		"prefer-template": "error",
 		"require-atomic-updates": "error",
 		"require-unicode-regexp": "warn",
-		"rest-spread-spacing": "error",
 		"require-yield": "error",
+		"rest-spread-spacing": "error",
 		"sort-imports": ["error", {
 			"ignoreCase": true,
 			"ignoreDeclarationSort": true

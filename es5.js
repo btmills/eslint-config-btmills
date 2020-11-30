@@ -4,28 +4,30 @@ module.exports = {
 	"rules": {
 		"no-alert": "error",
 		"no-array-constructor": "error",
-		"no-await-in-loop": "off",
+		"no-async-promise-executor": "off", // ES2017
+		"no-await-in-loop": "off", // ES2017
 		"no-bitwise": "error",
 		"no-buffer-constructor": "error",
 		"no-caller": "error",
 		"no-catch-shadow": "error",
-		"no-class-assign": "off",
+		"no-class-assign": "off", // ES2015
 		"no-compare-neg-zero": "off",
 		"no-cond-assign": "error",
-		"no-confusing-arrow": "off",
+		"no-confusing-arrow": "off", // ES2015
 		"no-console": "off",
-		"no-const-assign": "off",
+		"no-const-assign": "off", // ES2015
 		"no-constant-condition": "error",
+		"no-constructor-return": "off", // ES2015
 		"no-continue": "error",
 		"no-control-regex": "error",
 		"no-debugger": "error",
 		"no-delete-var": "error",
 		"no-div-regex": "error",
-		"no-dupe-class-members": "off",
+		"no-dupe-class-members": "off", // ES2015
 		"no-dupe-keys": "error",
 		"no-dupe-args": "error",
 		"no-duplicate-case": "error",
-		"no-duplicate-imports": "off",
+		"no-duplicate-imports": "off", // ES2015
 		"no-else-return": "off",
 		"no-empty": "error",
 		"no-empty-character-class": "error",
@@ -44,6 +46,7 @@ module.exports = {
 		"no-implicit-coercion": "off",
 		"no-implicit-globals": "error",
 		"no-implied-eval": "error",
+		"no-import-assign": "off", // ES2015
 		"no-inline-comments": "off",
 		"no-inner-declarations": ["error", "functions"],
 		"no-invalid-regexp": "error",
@@ -55,6 +58,7 @@ module.exports = {
 		"no-lone-blocks": "error",
 		"no-lonely-if": "off",
 		"no-loop-func": "error",
+		"no-misleading-character-class": "error",
 		"no-mixed-operators": "off",
 		"no-mixed-requires": "off",
 		"no-mixed-spaces-and-tabs": ["error", false],
@@ -69,6 +73,7 @@ module.exports = {
 		"no-new-func": "error",
 		"no-new-object": "error",
 		"no-new-require": "error",
+		"no-new-symbol": "off", // ES2015
 		"no-new-wrappers": "error",
 		"no-obj-calls": "error",
 		"no-octal": "error",
@@ -87,7 +92,7 @@ module.exports = {
 		"no-restricted-properties": "off",
 		"no-restricted-syntax": "off",
 		"no-return-assign": "error",
-		"no-return-await": "off",
+		"no-return-await": "off", // ES2017
 		"no-script-url": "error",
 		"no-self-assign": "error",
 		"no-self-compare": "error",
@@ -98,10 +103,10 @@ module.exports = {
 		"no-sparse-arrays": "error",
 		"no-sync": "error",
 		"no-tabs": "off",
-		"no-template-curly-in-string": "off",
+		"no-template-curly-in-string": "off", // ES2015
 		"no-ternary": "off",
 		"no-trailing-spaces": "error",
-		"no-this-before-super": "off",
+		"no-this-before-super": "off", // ES2015
 		"no-throw-literal": "error",
 		"no-undef": "error",
 		"no-undef-init": "error",
@@ -117,8 +122,9 @@ module.exports = {
 		"no-use-before-define": "off",
 		"no-useless-call": "error",
 		"no-useless-catch": "error",
-		"no-useless-computed-key": "off",
+		"no-useless-computed-key": "off", // ES2015
 		"no-useless-concat": "error",
+		"no-useless-constructor": "off", // ES2015
 		"no-useless-escape": "error",
 		"no-useless-return": "off",
 		"no-void": "error",
@@ -127,30 +133,31 @@ module.exports = {
 		"no-whitespace-before-property": "error",
 		"no-with": "error",
 
+		"accessor-pairs": "off",
 		"array-bracket-newline": "off",
 		"array-bracket-spacing": ["error", "never"],
 		"array-callback-return": "error",
 		"array-element-newline": "off",
-		"arrow-parens": "off",
-		"arrow-spacing": "off",
-		"accessor-pairs": "off",
+		"arrow-parens": "off", // ES2015
+		"arrow-spacing": "off", // ES2015
 		"block-scoped-var": "off",
 		"block-spacing": "error",
 		"brace-style": ["error", "1tbs"],
 		"callback-return": "error",
 		"camelcase": "off",
 		"capitalized-comments": "off",
-		"class-methods-use-this": "off",
+		"class-methods-use-this": "off", // ES2015
 		"comma-dangle": ["error", "never"],
 		"comma-spacing": "error",
 		"comma-style": "error",
 		"complexity": ["error", 11],
-		"computed-property-spacing": "off",
+		"computed-property-spacing": "off", // ES2015
 		"consistent-return": "error",
 		"consistent-this": "off",
-		"constructor-super": "off",
+		"constructor-super": "off", // ES2015
 		"curly": ["error", "multi-line"],
 		"default-case": "error",
+		"default-parameters-last": "off", // ES2015
 		"dot-location": ["error", "property"],
 		"dot-notation": ["error", { "allowKeywords": true }],
 		"eol-last": "error",
@@ -160,7 +167,7 @@ module.exports = {
 		"func-names": "off",
 		"func-style": ["off", "declaration"],
 		"function-paren-newline": "off",
-		"generator-star-spacing": "off",
+		"generator-star-spacing": "off", // ES2015
 		"getter-return": "error",
 		"global-require": "error",
 		"guard-for-in": "error",
@@ -177,6 +184,7 @@ module.exports = {
 		"lines-around-comment": "error",
 		"lines-around-directive": "off",
 		"lines-between-class-members": "off",
+		"max-classes-per-file": "off", // ES2015
 		"max-depth": "off",
 		"max-len": "off",
 		"max-lines": "off",
@@ -195,7 +203,7 @@ module.exports = {
 		"object-curly-newline": "off",
 		"object-curly-spacing": ["error", "always"],
 		"object-property-newline": "off",
-		"object-shorthand": "off",
+		"object-shorthand": "off", // ES2015
 		"one-var": "off",
 		"operator-assignment": ["error", "always"],
 		"operator-linebreak": "off",
@@ -209,27 +217,32 @@ module.exports = {
 			"prev": "directive",
 			"next": "directive"
 		}],
-		"prefer-arrow-callback": "off",
-		"prefer-const": "off",
-		"prefer-destructuring": "off",
+		"prefer-arrow-callback": "off", // ES2015
+		"prefer-const": "off", // ES2015
+		"prefer-destructuring": "off", // ES2015
+		"prefer-named-capture-group": "off", // ES2018
 		"prefer-numeric-literals": "error",
-		"prefer-promise-reject-errors": "off",
-		"prefer-reflect": "off",
-		"prefer-rest-params": "off",
-		"prefer-spread": "off",
-		"prefer-template": "off",
+		"prefer-object-spread": "off", // ES2018
+		"prefer-promise-reject-errors": "off", // ES2015
+		"prefer-reflect": "off", // ES2015
+		"prefer-rest-params": "off", // ES2015
+		"prefer-spread": "off", // ES2015
+		"prefer-template": "off", // ES2015
 		"quote-props": ["error", "as-needed", {
 			"numbers": true
 		}],
 		"quotes": ["error", "single"],
 		"radix": "error",
-		"require-await": "off",
+		"require-atomic-updates": "off", // ES2015
+		"require-await": "off", // ES2017
 		"require-jsdoc": "off",
+		"require-unicode-regexp": "off", // ES2015
 		"require-yield": "off",
-		"rest-spread-spacing": "off",
+		"rest-spread-spacing": "off", // ES2015
 		"semi": "error",
 		"semi-spacing": ["error", { "before": false, "after": true }],
 		"semi-style": "error",
+		"sort-imports": "off", // ES2015
 		"sort-keys": "off",
 		"sort-vars": "off",
 		"space-before-blocks": ["error", "always"],
@@ -243,9 +256,9 @@ module.exports = {
 		"spaced-comment": "off",
 		"strict": "error",
 		"switch-colon-spacing": "error",
-		"symbol-description": "off",
-		"template-curly-spacing": "off",
-		"template-tag-spacing": "off",
+		"symbol-description": "off", // ES2015
+		"template-curly-spacing": "off", // ES2015
+		"template-tag-spacing": "off", // ES2015
 		"unicode-bom": "error",
 		"use-isnan": "error",
 		"valid-jsdoc": "off",
