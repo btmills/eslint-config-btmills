@@ -1,6 +1,7 @@
 "use strict";
 
 module.exports = {
+	"reportUnusedDisableDirectives": true,
 	"rules": {
 		"no-alert": "error",
 		"no-array-constructor": "error",
@@ -24,6 +25,7 @@ module.exports = {
 		"no-delete-var": "error",
 		"no-div-regex": "error",
 		"no-dupe-class-members": "off", // ES2015
+		"no-dupe-else-if": "error",
 		"no-dupe-keys": "error",
 		"no-dupe-args": "error",
 		"no-duplicate-case": "error",
@@ -97,6 +99,7 @@ module.exports = {
 		"no-self-assign": "error",
 		"no-self-compare": "error",
 		"no-sequences": "error",
+		"no-setter-return": "error",
 		"no-shadow": "error",
 		"no-shadow-restricted-names": "off",
 		"no-spaced-func": "error",
@@ -117,6 +120,7 @@ module.exports = {
 		"no-unneeded-ternary": "error",
 		"no-unreachable": "error",
 		"no-unsafe-finally": "error",
+		"no-unsafe-negation": "error",
 		"no-unused-expressions": "error",
 		"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
 		"no-use-before-define": "off",
@@ -157,7 +161,8 @@ module.exports = {
 		"constructor-super": "off", // ES2015
 		"curly": ["error", "multi-line"],
 		"default-case": "error",
-		"default-parameters-last": "off", // ES2015
+		"default-case-last": "error",
+		"default-param-last": "off", // ES2015
 		"dot-location": ["error", "property"],
 		"dot-notation": ["error", { "allowKeywords": true }],
 		"eol-last": "error",
@@ -166,10 +171,12 @@ module.exports = {
 		"func-name-matching": "off",
 		"func-names": "off",
 		"func-style": ["off", "declaration"],
+		"function-call-argument-newline": "off",
 		"function-paren-newline": "off",
 		"generator-star-spacing": "off", // ES2015
 		"getter-return": "error",
 		"global-require": "error",
+		"grouped-accessor-pairs": ["error", "getBeforeSet"],
 		"guard-for-in": "error",
 		"handle-callback-err": "error",
 		"id-length": "off",
@@ -220,11 +227,13 @@ module.exports = {
 		"prefer-arrow-callback": "off", // ES2015
 		"prefer-const": "off", // ES2015
 		"prefer-destructuring": "off", // ES2015
+		"prefer-exponentiation-operator": "off", // ES2016
 		"prefer-named-capture-group": "off", // ES2018
 		"prefer-numeric-literals": "error",
 		"prefer-object-spread": "off", // ES2018
 		"prefer-promise-reject-errors": "off", // ES2015
 		"prefer-reflect": "off", // ES2015
+		"prefer-regex-literals": "error",
 		"prefer-rest-params": "off", // ES2015
 		"prefer-spread": "off", // ES2015
 		"prefer-template": "off", // ES2015

@@ -19,8 +19,10 @@ module.exports = {
 		"no-class-assign": "error",
 		"no-confusing-arrow": "off",
 		"no-const-assign": "error",
+		"no-constructor-return": "error",
 		"no-dupe-class-members": "error",
 		"no-duplicate-imports": "off", // Covered by "import/no-duplicates"
+		"no-import-assign": "error",
 		"no-new-symbol": "error",
 		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
@@ -33,6 +35,7 @@ module.exports = {
 		"class-methods-use-this": "error",
 		"computed-property-spacing": ["off", "never"],
 		"constructor-super": "error",
+		"default-param-last": "error",
 		"generator-star-spacing": "error",
 		"implicit-arrow-linebreak": "off",
 		"max-classes-per-file": "off",
