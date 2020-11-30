@@ -59,6 +59,10 @@ module.exports = {
 		"require-unicode-regexp": "warn",
 		"rest-spread-spacing": "error",
 		"require-yield": "error",
+		"sort-imports": ["error", {
+			"ignoreCase": true,
+			"ignoreDeclarationSort": true
+		}],
 		"symbol-description": "error",
 		"template-curly-spacing": "error",
 		"template-tag-spacing": "error",

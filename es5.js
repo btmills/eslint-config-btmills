@@ -116,6 +116,7 @@ module.exports = {
 		"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
 		"no-use-before-define": "off",
 		"no-useless-call": "error",
+		"no-useless-catch": "error",
 		"no-useless-computed-key": "off",
 		"no-useless-concat": "error",
 		"no-useless-escape": "error",
