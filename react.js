@@ -21,6 +21,10 @@ module.exports = {
 	},
 
 	"rules": {
+		// Nested ternaries are sometimes hte most elegant way to express
+		// something, particularly in JSX. Just use in good taste.
+		"no-nested-ternary": "off",
+
 		"jsx-quotes": ["error", "prefer-double"],
 
 		"react/jsx-no-bind": "off",

@@ -138,7 +138,8 @@ module.exports = {
 		"no-useless-constructor": "off", // ES2015
 		"no-useless-escape": "error",
 		"no-useless-return": "off",
-		"no-void": "error",
+		// If we want to pass `undefined`, it's safer to use `void 0`.
+		"no-void": "off",
 		"no-var": "off",
 		"no-warning-comments": "off",
 		"no-whitespace-before-property": "error",
