@@ -41,6 +41,7 @@ module.exports = {
 	"extends": "@btmills/eslint-config-btmills/es2019",
 	"extends": "@btmills/eslint-config-btmills/es2020",
 	"extends": "@btmills/eslint-config-btmills/es2021",
+	"extends": "@btmills/eslint-config-btmills/es2022",
 
 	// Use React and Flow with a language config by extending multiple configs
 	"extends": [
