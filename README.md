@@ -14,10 +14,10 @@ If using ES6 modules, install [eslint-plugin-import](https://github.com/benmoshe
 $ npm install --save-dev eslint-plugin-import
 ```
 
-If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react):
+If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks):
 
 ```sh
-$ npm install --save-dev eslint-plugin-react
+$ npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 If using [Flow](https://flow.org), install [babel-eslint](https://github.com/babel/babel-eslint) and [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype):
