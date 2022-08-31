@@ -34,7 +34,8 @@ module.exports = {
 		"react/jsx-no-comment-textnodes": "warn",
 		"react/jsx-no-constructed-context-values": "error",
 		"react/jsx-no-duplicate-props": "error",
-		"react/jsx-no-leaked-render": "error",
+		// Too many false positives. Rely on type checkers instead.
+		"react/jsx-no-leaked-render": "off",
 		"react/jsx-no-literals": "off",
 		"react/jsx-no-target-blank": "error",
 		"react/jsx-no-undef": "error",
@@ -117,7 +118,8 @@ module.exports = {
 		"react/forbid-elements": "off",
 		"react/forbid-foreign-prop-types": "off",
 		"react/forbid-prop-types": "off",
-		"react/hook-use-state": "error",
+		// Names that don't strictly follow this are generally still reasonable.
+		"react/hook-use-state": "off",
 		"react/iframe-missing-sandbox": "error",
 		"react/prefer-es6-class": "error",
 		"react/prefer-exact-props": "off",
