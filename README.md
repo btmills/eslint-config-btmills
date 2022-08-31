@@ -47,6 +47,22 @@ module.exports = {
 	"extends": [
 		"@btmills/eslint-config-btmills/es2015",
 		"@btmills/eslint-config-btmills/react",
+	],
+
+	// Use TypeScript
+	"overrides": [
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["@btmills/eslint-config-btmills/typescript"]
+		},
+		// Optionally include rules that require type information
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["@btmills/eslint-config-btmills/typescript-project"],
+			"parserOptions": {
+				"project": "./tsconfig.json"
+			}
+		}
 	]
 };
 ```

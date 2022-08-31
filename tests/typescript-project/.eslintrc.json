@@ -1,0 +1,13 @@
+{
+	"root": true,
+
+	"overrides": [
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["../../es2021.js", "../../typescript-project.js"],
+			"parserOptions": {
+				"project": "./tests/typescript-project/tsconfig.json"
+			}
+		}
+	]
+}

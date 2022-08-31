@@ -1,0 +1,10 @@
+{
+	"root": true,
+
+	"overrides": [
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["../../es2021.js", "../../typescript.js"]
+		}
+	]
+}
