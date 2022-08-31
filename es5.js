@@ -17,6 +17,7 @@ module.exports = {
 		"no-confusing-arrow": "off", // ES2015
 		"no-console": "off",
 		"no-const-assign": "off", // ES2015
+		"no-constant-binary-expression": "error",
 		"no-constant-condition": "error",
 		"no-constructor-return": "off", // ES2015
 		"no-continue": "error",
@@ -42,7 +43,7 @@ module.exports = {
 		"no-extra-boolean-cast": "error",
 		"no-extra-parens": "off",
 		"no-extra-semi": "error",
-		"no-fallthrough": "error",
+		"no-fallthrough": ["error", { "allowEmptyCase": true }],
 		"no-floating-decimal": "error",
 		"no-func-assign": "error",
 		"no-implicit-coercion": "off",
@@ -129,6 +130,7 @@ module.exports = {
 		"no-unsafe-negation": "error",
 		"no-unsafe-optional-chaining": "off", // ES2020
 		"no-unused-expressions": "error",
+		"no-unused-private-class-members": "off", // ES2022
 		"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
 		"no-use-before-define": "off",
 		"no-useless-backreference": "error",
@@ -241,6 +243,7 @@ module.exports = {
 		"prefer-exponentiation-operator": "off", // ES2016
 		"prefer-named-capture-group": "off", // ES2018
 		"prefer-numeric-literals": "error",
+		"prefer-object-has-own": "off", // ES2022
 		"prefer-object-spread": "off", // ES2018
 		"prefer-promise-reject-errors": "off", // ES2015
 		"prefer-reflect": "off", // ES2015
