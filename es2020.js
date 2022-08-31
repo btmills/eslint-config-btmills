@@ -9,5 +9,9 @@ module.exports = {
 
 	"parserOptions": {
 		"ecmaVersion": 2020
+	},
+
+	"rules": {
+		"no-unsafe-optional-chaining": "error"
 	}
 };

@@ -127,6 +127,7 @@ module.exports = {
 		"no-unreachable-loop": "error",
 		"no-unsafe-finally": "error",
 		"no-unsafe-negation": "error",
+		"no-unsafe-optional-chaining": "off", // ES2020
 		"no-unused-expressions": "error",
 		"no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
 		"no-use-before-define": "off",
