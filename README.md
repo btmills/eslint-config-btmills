@@ -20,6 +20,12 @@ If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslin
 $ npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 ```
 
+If using TypeScript, install [typescript-eslint](https://typescript-eslint.io/):
+
+```sh
+$ npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
 If using [Flow](https://flow.org), install [babel-eslint](https://github.com/babel/babel-eslint) and [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype):
 
 ```sh
@@ -48,6 +54,22 @@ module.exports = {
 		"@btmills/eslint-config-btmills/es2015",
 		"@btmills/eslint-config-btmills/react",
 		"@btmills/eslint-config-btmills/flow"
+	],
+
+	// Use TypeScript
+	"overrides": [
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["@btmills/eslint-config-btmills/typescript"]
+		},
+		// Optionally include rules that require type information
+		{
+			"files": ["**/*.ts{,x}"],
+			"extends": ["@btmills/eslint-config-btmills/typescript-project"],
+			"parserOptions": {
+				"project": "./tsconfig.json"
+			}
+		}
 	]
 };
 ```
