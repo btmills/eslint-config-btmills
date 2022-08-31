@@ -9,7 +9,8 @@ module.exports = {
 	},
 
 	"plugins": [
-		"react"
+		"react",
+		"react-hooks"
 	],
 
 	"settings": {
@@ -133,6 +134,9 @@ module.exports = {
 		"react/state-in-constructor": "off",
 		"react/static-property-placement": "off",
 		"react/style-prop-object": "error",
-		"react/void-dom-elements-no-children": "error"
+		"react/void-dom-elements-no-children": "error",
+
+		"react-hooks/exhaustive-deps": "error",
+		"react-hooks/rules-of-hooks": "error"
 	}
 };
