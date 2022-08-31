@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-	"extends": "./es2019.js",
+	"extends": "./es2020.js",
 
 	"env": {
 		"es2021": true
