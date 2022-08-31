@@ -5,31 +5,31 @@
 ## Installation
 
 ```sh
-$ npm install --save-dev eslint @btmills/eslint-config-btmills
+npm install --save-dev eslint @btmills/eslint-config-btmills
 ```
 
 If using ES6 modules, install [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import):
 
 ```sh
-$ npm install --save-dev eslint-plugin-import
+npm install --save-dev eslint-plugin-import
 ```
 
 If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks):
 
 ```sh
-$ npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
+npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 If using TypeScript, install [typescript-eslint](https://typescript-eslint.io/):
 
 ```sh
-$ npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 If using [Flow](https://flow.org), install [babel-eslint](https://github.com/babel/babel-eslint) and [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype):
 
 ```sh
-$ npm install --save-dev babel-eslint eslint-plugin-flowtype
+npm install --save-dev babel-eslint eslint-plugin-flowtype
 ```
 
 ## Usage
