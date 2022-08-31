@@ -9,8 +9,10 @@ module.exports = {
 
 	"rules": {
 		"flowtype/no-dupe-keys": "error",
+		"flowtype/no-duplicate-type-union-intersection-members": "error",
 		"flowtype/no-existential-type": "off",
 		"flowtype/no-flow-fix-me-comments": ["warn", "^\\$FlowFixMe: \\S+"],
+		"flowtype/no-internal-flow-type": "error",
 		"flowtype/no-mixed": "off",
 		"flowtype/no-mutable-array": "off",
 		"flowtype/no-primitive-constructor-types": "error",
@@ -24,9 +26,13 @@ module.exports = {
 		"flowtype/boolean-style": "error",
 		"flowtype/define-flow-type": "error",
 		"flowtype/delimiter-dangle": "error",
+		"flowtype/enforce-line-break": "off",
 		"flowtype/generic-spacing": "error",
+		"flowtype/interface-id-match": "off",
 		"flowtype/newline-after-flow-annotation": "off",
+		"flowtype/object-type-curly-spacing": "off",
 		"flowtype/object-type-delimiter": "error",
+		"flowtype/quotes": "off",
 		"flowtype/require-compound-type-alias": "off",
 		"flowtype/require-exact-type": "off",
 		"flowtype/require-indexer-name": "off",
@@ -41,6 +47,7 @@ module.exports = {
 		"flowtype/require-variable-type": "off",
 		"flowtype/semi": "error",
 		"flowtype/sort-keys": "error",
+		"flowtype/sort-type-union-intersection-members": "off",
 		"flowtype/space-after-type-colon": "error",
 		"flowtype/space-before-generic-bracket": "error",
 		"flowtype/space-before-type-colon": "error",
@@ -48,6 +55,7 @@ module.exports = {
 		"flowtype/type-id-match": "off",
 		"flowtype/type-import-style": "off",
 		"flowtype/union-intersection-spacing": "error",
-		"flowtype/use-flow-type": "error"
+		"flowtype/use-flow-type": "error",
+		"flowtype/use-read-only-spread": "error"
 	}
 };
