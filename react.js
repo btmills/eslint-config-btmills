@@ -123,7 +123,7 @@ module.exports = {
 		"react/iframe-missing-sandbox": "error",
 		"react/prefer-es6-class": "error",
 		"react/prefer-exact-props": "off",
-		"react/prefer-read-only-props": "off", // Use flowtype/require-readonly-react-props
+		"react/prefer-read-only-props": "off",
 		"react/prefer-stateless-functions": "off",
 		"react/prop-types": "error",
 		"react/react-in-jsx-scope": "error",
