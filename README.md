@@ -26,12 +26,6 @@ If using TypeScript, install [typescript-eslint](https://typescript-eslint.io/):
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-If using [Flow](https://flow.org), install [babel-eslint](https://github.com/babel/babel-eslint) and [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype):
-
-```sh
-npm install --save-dev babel-eslint eslint-plugin-flowtype
-```
-
 ## Usage
 
 Add one of the following lines to your project's `.eslintrc.js`:
@@ -49,11 +43,10 @@ module.exports = {
 	"extends": "@btmills/eslint-config-btmills/es2021",
 	"extends": "@btmills/eslint-config-btmills/es2022",
 
-	// Use React and Flow with a language config by extending multiple configs
+	// Use React with a language config by extending multiple configs
 	"extends": [
 		"@btmills/eslint-config-btmills/es2015",
 		"@btmills/eslint-config-btmills/react",
-		"@btmills/eslint-config-btmills/flow"
 	],
 
 	// Use TypeScript
