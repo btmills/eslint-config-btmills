@@ -1,0 +1,28 @@
+exports[`es2017 1`] = `
+[
+  {
+    "filePath": "es2017.js",
+    "messages": [
+      {
+        "ruleId": "no-await-in-loop",
+        "severity": 2,
+        "message": "Unexpected \`await\` inside a loop.",
+        "line": 7,
+        "column": 3,
+        "nodeType": "AwaitExpression",
+        "messageId": "unexpectedAwait",
+        "endLine": 7,
+        "endColumn": 14
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "async function foo(a, b) {\\n\\treturn a + (await b);\\n}\\n\\nasync function bar() {\\n\\twhile (foo()) {\\n\\t\\tawait bar();\\n\\t}\\n\\n\\tconst val = await foo(2, 3);\\n\\treturn val + 4;\\n}\\n\\nif (!(bar() instanceof Promise)) {\\n\\tthrow new Error('Async functions should return Promises.');\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

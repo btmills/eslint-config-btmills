@@ -1,0 +1,35 @@
+exports[`es2018 1`] = `
+[
+  {
+    "filePath": "es2018.js",
+    "messages": [
+      {
+        "ruleId": "prefer-object-spread",
+        "severity": 1,
+        "message": "Use an object spread instead of \`Object.assign\` eg: \`{ ...foo }\`.",
+        "line": 10,
+        "column": 2,
+        "nodeType": "CallExpression",
+        "messageId": "useSpreadMessage",
+        "endLine": 10,
+        "endColumn": 25,
+        "fix": {
+          "range": [
+            132,
+            155
+          ],
+          "text": "({ ...rest})"
+        }
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 1,
+    "source": "async function foo(a, b) {\\n\\treturn {\\n\\t\\t...(await a),\\n\\t\\tb,\\n\\t};\\n}\\n\\nasync function bar() {\\n\\tconst { val, ...rest } = await foo(2, 3);\\n\\tObject.assign({}, rest);\\n\\treturn val + 4 - rest;\\n}\\n\\nif (!(bar() instanceof Promise)) {\\n\\tthrow new Error('Async functions should return Promises.');\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

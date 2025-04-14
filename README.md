@@ -1,70 +1,117 @@
-# eslint-config-btmills
+# @btmills/eslint-config
 
 > My personal [ESLint](http://eslint.org) [shareable configurations](http://eslint.org/docs/developer-guide/shareable-configs).
 
 ## Installation
 
 ```sh
-npm install --save-dev eslint @btmills/eslint-config-btmills
+npm install --save-dev eslint @btmills/eslint-config-js
 ```
 
-If using ES6 modules, install [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import):
+If using Node, React, or TypeScript, install `@btmills/eslint-config-node`:
 
 ```sh
-npm install --save-dev eslint-plugin-import
+npm install --save-dev @btmills/eslint-config-node
 ```
 
-If using React, install [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks):
+If using React, install `@btmills/eslint-config-react`:
 
 ```sh
-npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
+npm install --save-dev @btmills/eslint-config-react
 ```
 
-If using TypeScript, install [typescript-eslint](https://typescript-eslint.io/):
+If using TypeScript, install `@btmills/eslint-config-typescript`:
 
 ```sh
-npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev @btmills/eslint-config-typescript
 ```
 
 ## Usage
 
-Add one of the following lines to your project's `.eslintrc.js`:
+Add the following to your project's `eslint.config.ts`:
 
-```js
-module.exports = {
-	"extends": "@btmills/eslint-config-btmills", // Defaults to es5
-	"extends": "@btmills/eslint-config-btmills/es5",
-	"extends": "@btmills/eslint-config-btmills/es2015",
-	"extends": "@btmills/eslint-config-btmills/es2016",
-	"extends": "@btmills/eslint-config-btmills/es2017",
-	"extends": "@btmills/eslint-config-btmills/es2018",
-	"extends": "@btmills/eslint-config-btmills/es2019",
-	"extends": "@btmills/eslint-config-btmills/es2020",
-	"extends": "@btmills/eslint-config-btmills/es2021",
-	"extends": "@btmills/eslint-config-btmills/es2022",
+```ts
+import { defineConfig } from 'eslint/config';
 
-	// Use React with a language config by extending multiple configs
-	"extends": [
-		"@btmills/eslint-config-btmills/es2015",
-		"@btmills/eslint-config-btmills/react",
-	],
+// Pick one:
+import { es5, es2015, /*...*/ es2024, latest } from '@btmills/eslint-config-js';
 
-	// Use TypeScript
-	"overrides": [
-		{
-			"files": ["**/*.ts{,x}"],
-			"extends": ["@btmills/eslint-config-btmills/typescript"]
+// Optional:
+import { browser } from '@btmills/eslint-config-js';
+import { node } from '@btmills/eslint-config-react-node';
+import { react } from '@btmills/eslint-config-react';
+import {
+	typescript,
+	typescriptProject,
+} from '@btmills/eslint-config-typescript';
+
+export default defineConfig([
+	// Start here
+	{
+		name: 'JavaScript',
+		// Pick one:
+		extends: [es5, es2015, /*...*/ es2024, latest],
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+
+	// Optional
+	{
+		name: 'Browser',
+		extends: [browser],
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+
+	// Optional
+	{
+		name: 'Node',
+		extends: [node],
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+
+	// Optional
+	{
+		name: 'React',
+		extends: [react],
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+
+	// Optional
+	{
+		name: 'TypeScript',
+		extends: [typescript],
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+
+	// Optional
+	{
+		name: 'TypeScript (with type checking)',
+		extends: [typescriptProject],
+		languageOptions: {
+			parserOptions: {
+				tsconfigRootDir: import.meta.dirname,
+			},
 		},
-		// Optionally include rules that require type information
-		{
-			"files": ["**/*.ts{,x}"],
-			"extends": ["@btmills/eslint-config-btmills/typescript-project"],
-			"parserOptions": {
-				"project": "./tsconfig.json"
-			}
-		}
-	]
-};
+		files: [
+			// ...
+		],
+		// ...more config as needed
+	},
+]);
 ```
 
 ## License

@@ -1,0 +1,28 @@
+exports[`es2022 1`] = `
+[
+  {
+    "filePath": "es2022.js",
+    "messages": [
+      {
+        "ruleId": "no-unused-private-class-members",
+        "severity": 2,
+        "message": "'#unusedPrivateInstanceField' is defined but never used.",
+        "line": 6,
+        "column": 2,
+        "nodeType": "PropertyDefinition",
+        "messageId": "unusedPrivateClassMember",
+        "endLine": 6,
+        "endColumn": 29
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "export default class Example {\\n\\t#privateInstanceField = this.#privateInstanceMethod();\\n\\t#privateInstanceMethod() {\\n\\t\\treturn this.#privateInstanceField;\\n\\t}\\n\\t#unusedPrivateInstanceField = false;\\n\\tpublicInstanceField = 42;\\n\\n\\tstatic staticField = 42;\\n\\tstatic #privateStaticField = this.#privateStaticMethod();\\n\\tstatic #privateStaticMethod() {\\n\\t\\treturn this.#privateStaticField;\\n\\t}\\n}\\n\\nawait globalThis.topLevelAwait();\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;
