@@ -1,0 +1,41 @@
+exports[`typescript-project 1`] = `
+[
+  {
+    "filePath": "typescript-project.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-array-delete",
+        "severity": 2,
+        "message": "Using the \`delete\` operator with an array expression is unsafe.",
+        "line": 4,
+        "column": 2,
+        "nodeType": "UnaryExpression",
+        "messageId": "noArrayDelete",
+        "endLine": 4,
+        "endColumn": 17,
+        "suggestions": [
+          {
+            "messageId": "useSplice",
+            "fix": {
+              "range": [
+                77,
+                92
+              ],
+              "text": "stuff.splice(0, 1)"
+            },
+            "desc": "Use \`array.splice()\` instead."
+          }
+        ]
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "type Thing = number;\\n\\nexport function count(stuff: Array<Thing>): unknown {\\n\\tdelete stuff[0];\\n\\treturn stuff.includes(1);\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

@@ -1,0 +1,28 @@
+exports[`typescript 1`] = `
+[
+  {
+    "filePath": "typescript.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-this-alias",
+        "severity": 2,
+        "message": "Unexpected aliasing of 'this' to local variable.",
+        "line": 4,
+        "column": 6,
+        "nodeType": "Identifier",
+        "messageId": "thisAssignment",
+        "endLine": 4,
+        "endColumn": 10
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "type Thing = number;\\n\\nexport function count(value: Thing): unknown {\\n\\tvar self = this;\\n\\treturn \`\${self} \${value === 1 ? 'item' : 'items'}\`;\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

@@ -1,0 +1,28 @@
+exports[`es2023 1`] = `
+[
+  {
+    "filePath": "es2023.js",
+    "messages": [
+      {
+        "ruleId": "no-empty-static-block",
+        "severity": 2,
+        "message": "Unexpected empty static block.",
+        "line": 3,
+        "column": 2,
+        "nodeType": "StaticBlock",
+        "messageId": "unexpected",
+        "endLine": 3,
+        "endColumn": 11
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "#!/usr/bin/env node\\nexport class Foo {\\n\\tstatic {}\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

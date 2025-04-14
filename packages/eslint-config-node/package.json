@@ -1,0 +1,56 @@
+{
+  "name": "@btmills/eslint-config-node",
+  "version": "0.0.1",
+  "description": "My personal ESLint shareable configurations.",
+  "keywords": [
+    "eslint-config"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Brandon Mills",
+    "url": "https://github.com/btmills"
+  },
+  "homepage": "https://github.com/btmills/eslint-config-btmills#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btmills/eslint-config-btmills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/btmills/eslint-config-btmills/issues"
+  },
+  "scripts": {
+    "fix": "eslint --fix; npm run format",
+    "format": "prettier --write .",
+    "test": "npm-run-all --parallel --aggregate-output test:*",
+    "test:format": "prettier --check .",
+    "test:lint": "eslint",
+    "test:node": "node --test 'tests/**/*.test.{j,t}s'",
+    "test:package": "attw --pack --profile esm-only .",
+    "test:types": "tsc --noEmit",
+    "update-snapshots": "node --test --test-update-snapshots 'tests/**/*.test.{j,t}s'"
+  },
+  "files": [
+    "src/"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "peerDependencies": {
+    "eslint": "^9.25.1"
+  },
+  "dependencies": {
+    "eslint-plugin-n": "^17.17.0",
+    "globals": "^16.0.0"
+  },
+  "devDependencies": {
+    "@btmills/eslint-config-node": "file:."
+  },
+  "engines": {
+    "node": "^20.11.0 || >=22.0.0"
+  }
+}

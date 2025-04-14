@@ -1,0 +1,32 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"include": [],
+	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"allowJs": true,
+		"checkJs": true,
+		"erasableSyntaxOnly": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"lib": ["ES2024"],
+		"module": "Node16",
+		"moduleResolution": "node16",
+		"noEmit": true,
+		"target": "ES2024",
+		"verbatimModuleSyntax": true,
+
+		"strict": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true
+	}
+}

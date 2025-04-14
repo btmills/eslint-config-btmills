@@ -1,0 +1,28 @@
+exports[`es2015 1`] = `
+[
+  {
+    "filePath": "es2015.js",
+    "messages": [
+      {
+        "ruleId": "require-yield",
+        "severity": 2,
+        "message": "This generator function does not have 'yield'.",
+        "line": 9,
+        "column": 6,
+        "nodeType": "FunctionExpression",
+        "messageId": "missingYield",
+        "endLine": 11,
+        "endColumn": 3
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "export default class Foo {\\n\\tconstructor() {\\n\\t\\tthis.bar = 42;\\n\\t\\tlet [a, b] = this.bar.toString();\\n\\t\\tb += 4;\\n\\t\\tthis.selfRef = new Foo(a, b);\\n\\t}\\n\\n\\t*gen() {\\n\\t\\treturn this.bar;\\n\\t}\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

@@ -1,0 +1,28 @@
+exports[`react 1`] = `
+[
+  {
+    "filePath": "react.js",
+    "messages": [
+      {
+        "ruleId": "react/void-dom-elements-no-children",
+        "severity": 2,
+        "message": "Void DOM element <img /> cannot receive children.",
+        "line": 10,
+        "column": 5,
+        "nodeType": "JSXElement",
+        "messageId": "noChildrenInVoidEl",
+        "endLine": 10,
+        "endColumn": 20
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import PropTypes from 'prop-types';\\nimport React from 'react';\\n\\nexport default class Foo extends React.Component {\\n\\trender() {\\n\\t\\tconst { name, ...props } = this.props;\\n\\n\\t\\treturn (\\n\\t\\t\\t<p {...props}>\\n\\t\\t\\t\\t<img>What</img>\\n\\t\\t\\t\\tHello, {name}!\\n\\t\\t\\t</p>\\n\\t\\t);\\n\\t}\\n}\\n\\nFoo.displayName = 'Foo';\\n\\nFoo.propTypes = {\\n\\tname: PropTypes.string.isRequired,\\n};\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

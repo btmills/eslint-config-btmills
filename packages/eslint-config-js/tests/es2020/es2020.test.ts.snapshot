@@ -1,0 +1,28 @@
+exports[`es2020 1`] = `
+[
+  {
+    "filePath": "es2020.js",
+    "messages": [
+      {
+        "ruleId": "no-unsafe-optional-chaining",
+        "severity": 2,
+        "message": "Unsafe usage of optional chaining. If it short-circuits with 'undefined' the evaluation will throw TypeError.",
+        "line": 4,
+        "column": 2,
+        "nodeType": "ChainExpression",
+        "messageId": "unsafeOptionalChain",
+        "endLine": 4,
+        "endColumn": 11
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "const bigInt = 123n;\\n\\nbigInt?.thisDoesNotExist?.(\`Hello, \${bigInt.maybeNull ?? 'world'}!\`);\\n(null?.foo)();\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

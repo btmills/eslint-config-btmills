@@ -1,39 +1,36 @@
 {
-  "name": "@btmills/eslint-config-btmills",
-  "version": "7.0.0-alpha.2",
-  "description": "My personal ESLint shareable configurations.",
-  "main": "es5.js",
-  "license": "MIT",
-  "author": {
-    "name": "Brandon Mills",
-    "url": "https://github.com/btmills"
-  },
-  "repository": "btmills/eslint-config-btmills",
-  "homepage": "https://github.com/btmills/eslint-config-btmills#readme",
-  "bugs": {
-    "url": "https://github.com/btmills/eslint-config-btmills/issues"
-  },
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/eslint-config-js",
+    "packages/eslint-config-node",
+    "packages/eslint-config-react",
+    "packages/eslint-config-typescript"
+  ],
   "scripts": {
-    "lint": "eslint .",
-    "test": "npm run lint"
-  },
-  "keywords": [
-    "eslint-config"
-  ],
-  "files": [
-    "*.js"
-  ],
-  "peerDependencies": {
-    "eslint": "^8.23.0"
+    "clean": "rm -rf node_modules packages/*/node_modules",
+    "reinstall": "npm run clean && npm install",
+    "fix": "eslint --fix; npm run format",
+    "format": "prettier --write .",
+    "test": "npm-run-all --parallel --aggregate-output test:*",
+    "test:format": "prettier --check .",
+    "test:lint": "eslint",
+    "test:types": "tsc --noEmit",
+    "test:workspaces": "npm test --workspaces"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^8.23.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^4.8.2"
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@btmills/eslint-config-js": "file:packages/eslint-config-js",
+    "@btmills/eslint-config-node": "file:packages/eslint-config-node",
+    "@btmills/eslint-config-typescript": "file:packages/eslint-config-typescript",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.25.1",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": "^20.11.0 || >=22.0.0"
   }
 }

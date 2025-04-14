@@ -1,0 +1,35 @@
+exports[`es2016 1`] = `
+[
+  {
+    "filePath": "es2016.js",
+    "messages": [
+      {
+        "ruleId": "prefer-exponentiation-operator",
+        "severity": 2,
+        "message": "Use the '**' operator instead of 'Math.pow'.",
+        "line": 2,
+        "column": 18,
+        "nodeType": "CallExpression",
+        "messageId": "useExponentiation",
+        "endLine": 2,
+        "endColumn": 32,
+        "fix": {
+          "range": [
+            40,
+            54
+          ],
+          "text": "2**8"
+        }
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 1,
+    "fixableWarningCount": 0,
+    "source": "const actual = 2 ** 8;\\nconst expected = Math.pow(2, 8);\\n\\nif (actual !== expected) {\\n\\tthrow new Error('Whoops!');\\n}\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;

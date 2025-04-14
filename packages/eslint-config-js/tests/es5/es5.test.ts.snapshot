@@ -1,0 +1,28 @@
+exports[`es5 1`] = `
+[
+  {
+    "filePath": "es5.js",
+    "messages": [
+      {
+        "ruleId": "no-labels",
+        "severity": 2,
+        "message": "Unexpected labeled statement.",
+        "line": 8,
+        "column": 2,
+        "nodeType": "LabeledStatement",
+        "messageId": "unexpectedLabel",
+        "endLine": 8,
+        "endColumn": 15
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "(function () {\\n\\t'use strict';\\n\\n\\tfunction foo() {\\n\\t\\treturn 42;\\n\\t}\\n\\n\\tlabel: foo();\\n})();\\n",
+    "usedDeprecatedRules": []
+  }
+]
+`;
