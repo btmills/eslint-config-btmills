@@ -42,7 +42,10 @@ export default defineConfig({
 			},
 		],
 		'@typescript-eslint/consistent-type-definitions': 'off',
-		'@typescript-eslint/consistent-type-imports': 'error',
+		'@typescript-eslint/consistent-type-imports': [
+			'error',
+			{ fixStyle: 'inline-type-imports' },
+		],
 		'@typescript-eslint/explicit-function-return-type': 'off',
 		'@typescript-eslint/explicit-member-accessibility': 'error',
 		'@typescript-eslint/explicit-module-boundary-types': 'error',
